@@ -260,14 +260,468 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		      	)
 		    ), 
             array(
-		      	'name' => 'Aeromite',
+		      	'name' => 'Mimitoss',
 		      	'number' => 48,
-		      	'description' => 'Aéromite affectionne particulièrement les forêts, qu\'elles soient tempérées, tropicales ou marécageuses. Lorsqu\'il vole, une poudre toxique invisible tombe de ses ailes. Ce Pokémon est hautement toxique, car il combine de la Poudre toxik avec une attaque Tornade, ce qui a pour effet de la propager partout.',
+		      	'description' => 'Mimitoss ressemble à une boule de poils avec des antennes. Il a de petites dents et des yeux rouges. Ces-derniers sont identiques aux yeux d\'une mouche. ',
 		      	'type' => array (
 		      		'Insecte',
 		      		'Poison'
 		      	)
 		    ),
+            array(
+		      	'name' => 'Aeromite',
+		      	'number' => 49,
+		      	'description' => 'Aéromite affectionne particulièrement les forêts, qu\'elles soient tempérées, tropicales ou marécageuses. Lorsqu\'il vole, une poudre toxique invisible tombe de ses ailes. Ce Pokémon est hautement toxique, car il combine de la Poudre toxik avec une attaque Tornade, ce qui a pour effet de la propager partout. ',
+		      	'type' => array (
+		      		'Insecte',
+		      		'Poison'
+		      	)
+		    ),
+            array(
+		      	'name' => 'Taupiqueur',
+		      	'number' => 50,
+		      	'description' => 'Les Taupiqueur sont des créatures petites qui bougent en creusant dans le sol. Ils sont affaiblis par la lumière du soleil en raison de leur peau très fine et vivent sous terre, généralement à 1 mètre de profondeur ou dans des grottes, pour s\'en protéger. Là où ils creusent, la terre est plus fertile car elle est labourée. Ils se nourrissent de racines de plantes et ils remontent rarement à la surface. Leur tête sort approximativement de 20 cm au-dessus du sol. Toutefois, leur véritable taille reste à ce jour un mystère.',
+		      	'type' => array (
+		      		'sol'
+		      	)
+		    ),            
+		    array(
+		      	'name' => 'Triopikeur',
+		      	'number' => 51,
+		      	'description' => 'Évolution de Taupiqueur, Triopikeur est une association de trois Taupiqueur. Ils creusent beaucoup plus rapidement, et peuvent parfois, s\'ils sont courroucés, lancer un puissant séisme2. Chacun pense exactement comme les deux autres, chaque tête creusant le sol à tour de rôle dans une coopération parfaite et inlassable. Il peut atteindre des profondeurs de 100 kilomètres.',
+		      	'type' => array (
+		      		'sol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Miaouss',
+		      	'number' => 52,
+		      	'description' => 'Miaouss est un Pokémon qui préfère largement vivre dans les villes plutôt que dans la nature. Il fouille les poubelles et se nourrit des déchets qu\'il y trouve. Apprivoisé, il passe son temps sur les genoux de son maître à se faire caresser. Beaucoup essayent de le forcer à utiliser son attaque Jackpot, mais Miaouss est trop rusé pour accepter. ',
+		      	'type' => array (
+		      		'normal'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Persian',
+		      	'number' => 53,
+		      	'description' => 'Un Persian apprivoisé a le même caractère que son maître. Si celui-ci est mauvais, le Pokémon devient vite arrogant et agressif, sauf avec lui. Sauvage, il se tapit dans les hautes herbes et bondit brusquement, toutes griffes sorties, sur la malheureuse proie. Ses griffes acérées ne laissent aucune chance à la victime. ',
+		      	'type' => array (
+		      		'normal'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Psykokwak',
+		      	'number' => 54,
+		      	'description' => 'Psykokwak est un étrange Pokémon mi-aquatique, mi-psy. Ce pauvre Pokémon a la migraine en permanence, et quand celle-ci atteint son paroxysme, il utilise de puissants pouvoirs psy sans s\'en rendre compte. Il maîtrise alors l\'attaque Choc mental avec perfection. ',
+		      	'type' => array (
+		      		'eau'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Akwakwak',
+		      	'number' => 55,
+		      	'description' => 'Akwakwak est un excellent nageur, qui aime s\'entraîner à nager contre les courants marins pour se muscler. La perle sur son front lui prodigue de puissants pouvoirs psy, et les griffes au bout de ses pattes sont acérées. Beaucoup de dresseurs de Pokémons aquatiques aimeraient en posséder un.  ',
+		      	'type' => array (
+		      		'eau'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Férosinge',
+		      	'number' => 56,
+		      	'description' => 'Ferosinge est un Pokémon hyperactif qui ne dort pratiquement pas. Il se balance rapidement d\'arbre en arbre, et la moindre chose peut le mettre en colère. Quand il se bat, en général il ne compte pas sur sa puissance mais sur son agilité, et décoche rapidement des coups de griffe dans le dos de son ennemi.',
+		      	'type' => array (
+		      		'Combat'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Colossinge',
+		      	'number' => 57,
+		      	'description' => 'Colosinge a un épouvantable caractère. Il n\'existe pas un seul Colossinge pacifique. Quand ce Pokémon se met en rogne contre quelqu\'un, cela devient son obsession, il en oublie même de manger ou de boire et ne pense qu\'à le frapper. Quand il est « relativement » calme, il s\'entraîne en frappant dans des arbres ou des rochers. ',
+		      	'type' => array (
+		      		'Combat'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Caninos',
+		      	'number' => 58,
+		      	'description' => 'Caninos est très fidèle. Loyal, il préfère se sauver plutôt que d\'attaquer son maître si celui-ci est injuste envers lui. Ce Pokémon est très apprécié car il est difficile de trouver plus affectueux et plus protecteur que lui. Il aime beaucoup jouer, c\'est pour cela que c\'est un grand ami des enfants. ',
+		      	'type' => array (
+		      		'Feu'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Arcanin',
+		      	'number' => 59,
+		      	'description' => 'Arcanin fait partie des légendes Chinoises. Il a longtemps été considéré comme légendaire, car on pensait qu\'il courait avec le vent. Sous ses aspects terrifiants, il est doux et fidèle, et les dresseurs s\'en servent comme monture. Quand il combat, il crache des flammes impressionnantes. ',
+		      	'type' => array (
+		      		'Feu'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Ptitard',
+		      	'number' => 60,
+		      	'description' => ' Ptitard vit dans les lacs ou les étangs. Il peut nager à bonne vitesse car sa queue est une nageoire efficace mais par contre, il est beaucoup moins adroit sur terre car ses petites pattes n\'offrent pas un très bon équilibre. Une fine muqueuse lui entoure le corps, ce qui le rends très glissant. ',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Tetarte',
+		      	'number' => 61,
+		      	'description' => 'Quand la spirale sur le ventre de Tetarte commence à tourner, il ne faut surtout pas la regarder car sinon, on s\'endort immédiatement. Personne ne sait dans quelle sens elle tourne car tout le monde s\'endort avant d\'avoir vu. Il est relativement à l\'aise sur terre, mais son élément reste l\'eau.  ',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Tartard',
+		      	'number' => 62,
+		      	'description' => 'Tartard défend férocement son territoire, ne laissant dépasser que ses deux yeux de la surface de l\'eau pour surveiller les alentours. Il utilise des attaques d\'eau, mais il fait aussi tâter de ses poings à ses ennemis. Plutôt trapu, il n\'est pas très rapide sur terre, mais une fois dans l\'eau, il se déplace très rapidement.',
+		      	'type' => array (
+		      		'Eau',
+		      		'Combat'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Abra',
+		      	'number' => 63,
+		      	'description' => 'Abra dort dix-huit heures par jour, mais pourtant, même éveillé, ses yeux restent fermés. Des dresseurs d\'Abra affirment que les rares fois où ils ouvrent leurs yeux, ceux-ci sont entièrement rouges. Il peut sentir à n\'importe quel moment quand il est en danger, et se téléporte pour se mettre en lieu sûr. ',
+		      	'type' => array (
+		      		'Psy'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Kadabra',
+		      	'number' => 64,
+		      	'description' => ' Kadabra émet en permanence une puissante onde psychique, et rester trop longtemps auprès de lui donne la migraine. Sa cuillère traduit ses ondes psychiques en puissantes attaques psy. Juste par la pensée, il peut soulever trois Ronflex en même temps.',
+		      	'type' => array (
+		      		'Psy'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Alakazam',
+		      	'number' => 65,
+		      	'description' => 'Alakazam est un Pokémon qui n\'aime pas l\'effort physique. Il utilise sa Télékinésie pour toutes ses actions : manger, amener un objet à lui… Les scientifiques on démontré que si Alakazam utilisait des cuillères à café plutôt que des cuillères à soupes, leur pouvoir était moins puissant. ',
+		      	'type' => array (
+		      		'Psy'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Machoc',
+		      	'number' => 66,
+		      	'description' => 'En général utilisé pour les tâches physiques, on trouve souvent des Machoc sur les chantiers. Ils adorent tout ce qui est musculation, et travailler pour les hommes est comme un jeu pour eux. Il ont des muscles spéciaux qui empêchent les courbatures et les claquages musculaires. ',
+		      	'type' => array (
+		      		'Combat'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Machopeur',
+		      	'number' => 67,
+		      	'description' => 'Machopeur est si fort que, parfois il a du mal à contrôler ses muscles. C\'est pour ça que chaque Machopeur a une ceinture spéciale qui l\'aide à se contrôler. Ses muscles sont durs comme de la pierre : il ne le sentirait même pas si vous tapiez dessus avec un marteau. D\'un coup de poings, il peut briser un bloc d\'acier en deux.  ',
+		      	'type' => array (
+		      		'Combat'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Mackogneur',
+		      	'number' => 68,
+		      	'description' => 'Mackogneur a tellement besoin de détendre ses muscles qu\'il a tendance à taper d\'abord, et réfléchir ensuite. C\'est le Pokémon le plus fort qui existe à ce jour, soulever une maison ne lui fait pas peur. Mais il est incapable de passer une aiguille dans un fil car ses bras s\'emmêlent dès qu\'il doit faire un travail délicat. ',
+		      	'type' => array (
+		      		'Combat'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Chetiflor',
+		      	'number' => 69,
+		      	'description' => 'Les Chetiflor vivent en groupes dans la jungle, car il sont plutôt faible. Mais dès qu\'ils prennent confiance en eux et qu\'ils deviennent capables d\'utiliser l\'attaque Acide ou l\'attaque Fouet-liane, ils quittent leur clan. Ces Pokémons se nourrissent principalement d\'insectes volants qu\'ils piègent dans leur bouche.  ',
+		      	'type' => array (
+		      		'Plante',
+		      		'Poison'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Boustiflor',
+		      	'number' => 70,
+		      	'description' => 'Boustiflor se pends à une branche, et attend tranquillement qu\'une proie passe pour lui cracher un jet d\'acide. Pour se déplacer, il utilise son Fouet-liane et s\'agrippe de branches en branches. Mais s\'il est en terrain découvert, il est contraint de bondir sur son ventre.  ',
+		      	'type' => array (
+		      		'Plante',
+		      		'Poison'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Empiflor',
+		      	'number' => 71,
+		      	'description' => 'Empiflor vit en petit groupe familial, au plus profond de la jungle. Il se pend aux branches basses, à quelques centimètres du sol et attend que la malheureuse proie passe devant lui sans s\'en rendre compte pour la happer d\'un coup. Elle est ensuite lentement digérée dans sa poche ventrale.  ',
+		      	'type' => array (
+		      		'Plante',
+		      		'Poison'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Tentacool',
+		      	'number' => 72,
+		      	'description' => 'Les Tentacool flottent en grands bancs à la surface de l\'eau. Ils vivent principalement au large, mais les vents forts peuvent les ramener près des côtes. Les deux grands globes rouges sur leur tête permettent d\'envoyer de puissants ultrasons, et leurs tentacules sont venimeux. ',
+		      	'type' => array (
+		      		'Eau',
+		      		'Poison'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Tentacruel',
+		      	'number' => 73,
+		      	'description' => 'Un Tentacruel possède en moyenne quatre-vingt tentacules, tous très toxiques. Quand il se bat, il envoie de très puissants ultrasons, capables de rendre fou pour toute la vie. Il se sert habilement de ses tentacules pour attraper, pour trancher ou pour frapper. ',
+		      	'type' => array (
+		      		'Eau',
+		      		'Poison'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Racaillou',
+		      	'number' => 74,
+		      	'description' => 'Racaillou sait parfaitement se confondre parmi les rochers, et si par malheur quelqu\'un lui shoote dedans, il est capable de lui briser les deux chevilles. Mais en général, il préfère prendre la fuite. Ses bras musclés lui permet d\'effectuer de puissantes attaques Jet-de-pierre. ',
+		      	'type' => array (
+		      		'Roche',
+		      		'Sol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Gravalanch',
+		      	'number' => 75,
+		      	'description' => 'Très imposant, un Gravalanch utilise alternativement ses quatre bras pour lancer des rochers à ses ennemis. S\'il donne des coups dans les parois de la grotte, c\'est qu\'il est en train d\'effectuer une attaque Eboulement. Il se nourrit exclusivement de cailloux, on a remarqué qu\'il affectionnait particulièrement ceux recouverts de mousse. ',
+		      	'type' => array (
+		      		'Roche',
+		      		'Sol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Grolem',
+		      	'number' => 76,
+		      	'description' => 'Grolem, trapu et lourd, a beaucoup de mal à se déplacer grâce à ses deux jambes. Il préfère bouger en roulant, c\'est pour ça que les cailloux qui constituent son corps sont plats. Il est beaucoup moins agile que ces précédentes évolutions, alors il se bat en provoquant des Séismes ou des Abysses.',
+		      	'type' => array (
+		      		'Roche',
+		      		'Sol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Ponyta',
+		      	'number' => 77,
+		      	'description' => 'Peu de temps après la naissance, Ponyta est capable de courir aussi vite que sa mère. Courir le rend heureux, sa crinière s\'embrase joyeusement quand il galope. Si son maître ne le fait pas suffisamment défouler, il dépérit rapidement. S\'il se fait agresser, les sabots de Ponyta peuvent fracasser le crâne de son adversaire. ',
+		      	'type' => array (
+		      		'Feu'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Galopa',
+		      	'number' => 78,
+		      	'description' => 'Au galop, la vitesse maximale d\'un Galopa est de 240 km/h. S\'il est en confiance, sa crinière n\'est pas brûlante et il aime être monté. Il a sans cesse besoin de se prouver qu\'il est le plus rapide, c\'est pour cela qu\'il défie tout ce qui bouge dans une course, où il sort vainqueur à chaque fois. ',
+		      	'type' => array (
+		      		'Feu'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Galopa',
+		      	'number' => 78,
+		      	'description' => 'Au galop, la vitesse maximale d\'un Galopa est de 240 km/h. S\'il est en confiance, sa crinière n\'est pas brûlante et il aime être monté. Il a sans cesse besoin de se prouver qu\'il est le plus rapide, c\'est pour cela qu\'il défie tout ce qui bouge dans une course, où il sort vainqueur à chaque fois. ',
+		      	'type' => array (
+		      		'Feu'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Ramoloss',
+		      	'number' => 79,
+		      	'description' => 'Ramoloss peut passer une journée entière à se prélasser au soleil sans rien faire. Il n\'est pas très vif d\'esprit, et il a à chaque fois un temps de réaction pour comprendre ce qu\'on vient de lui dire, ou pour comprendre ce qu\'il vient de se passer. Il ressent la douleur seulement au bout de cinq secondes. ',
+		      	'type' => array (
+		      		'Eau',
+		      		'Psy'
+		      	)
+		    ),	
+		    array(
+		      	'name' => 'Flagadoss',
+		      	'number' => 80,
+		      	'description' => 'Un Flagadoss ne peut apparaître que si un Kokyas mord la queue d\'un Ramoloss. Il développe alors plus largement ses pouvoirs psychiques, mais n\'en devient pas plus dégourdi pour autant. Son attaque Amnésie peut paraître inutile, mais elle le rend en réalité plus puissant en augmentant presque toutes ses capacités. ',
+		      	'type' => array (
+		      		'Eau',
+		      		'Psy'
+		      	)
+		    ),	
+		    array(
+		      	'name' => 'Magnéti',
+		      	'number' => 81,
+		      	'description' => 'Magnéti est irrésistiblement attiré par toutes les sources de courant électrique. Quand il trouve un objet qui fonctionne à l\'électricité, il se colle dessus pour en absorber l\'énergie. Il lévite en envoyant un léger champs électrique. Ses attaques Tonnerre peuvent déclencher des crises d\'épilepsie. ',
+		      	'type' => array (
+		      		'Electrik',
+		      		'Acier'
+		      	)
+		    ),	
+		    array(
+		      	'name' => 'Magneton',
+		      	'number' => 82,
+		      	'description' => 'Un Magnéton est une association de trois Magnéti, soudés par un puissant courant électrique. Leurs aimants attirent toute l\'électricité contenue dans l\'air. Magnéton est très excité les jours d\'orages, et il essaye à tout prix d\'attirer la foudre sur lui. Son attaque Cage-éclair paralyse à tous les coups son ennemi. ',
+		      	'type' => array (
+		      		'Electrik',
+		      		'Acier'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Canarticho',
+		      	'number' => 83,
+		      	'description' => 'Canarticho ne se sépare jamais de son poireau car il lui sert à se défendre. Il le brandit habilement pour frapper, ou trancher. Les gens pensaient que ce poireau possédait des vertus particulières, mais c\'est juste un banal légume. C\'est un Pokémon solitaire. ',
+		      	'type' => array (
+		      		'Normal',
+		      		'Vol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Doduo',
+		      	'number' => 84,
+		      	'description' => 'Doduo est un Pokémon qui vit, à l\'état sauvage, dans les grandes plaines, où il peut courir à loisir. Ne pouvant pas voler, il a développé ses pattes pour échapper à ses ennemis. Ce Pokémon possède bien deux cerveaux, mais une seule tête est capable de contrôler le corps ; c\'est pour cela que la deuxième tête est toujours agressive. ',
+		      	'type' => array (
+		      		'Normal',
+		      		'Vol'
+		      	)
+		    ),	
+		    array(
+		      	'name' => 'Dodrio',
+		      	'number' => 85,
+		      	'description' => 'Les trois têtes de Dodrio possèdent leur propre caractère. Les trois têtes ne dorment jamais en même temps, car elles se relaient pour monter la garde. ',
+		      	'type' => array (
+		      		'Normal',
+		      		'Vol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Otaria',
+		      	'number' => 86,
+		      	'description' => 'Otaria possède un épaisse couche de graisse qui le protège des eaux glacées. Son pelage blanc le confond parfaitement sur la neige, car il vit uniquement dans les climats glacés. Nager dans une eau dont la température descend en dessous de zéro ne lui fait pas peur. ',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+		    ),	
+		    array(
+		      	'name' => 'Lamantine',
+		      	'number' => 87,
+		      	'description' => 'Lamantine est si gracieux que, jadis, les marins le prenait pour une sirène. Pour se reposer, il se hisse sur les Icebergs, sa peau dure est fournie d\'une couche de graisse qui l\'isole parfaitement du froid. Il sait se déplacer sur terre, mais il est beaucoup plus à l\'aise dans l\'eau pour lancer ses Onde Boréales. ',
+		      	'type' => array (
+		      		'Eau',
+		      		'Glace'
+		      	)
+		    ),	
+		    array(
+		      	'name' => 'Tadmorv',
+		      	'number' => 88,
+		      	'description' => 'Le liquide visqueux qui compose le corps de Tadmorv est si toxique, qu\'une fois qu\'il passe sur la terre, celle-ci devient infertile. Quelques gouttes tarissent un étang. Mais heureusement, il n\'aime pas tellement la vie sauvage et préfère vivre dans les grandes villes, où il s\'installe dans les égouts et les canalisations. ',
+		      	'type' => array (
+		      		'Poison',
+		      	)
+		    ),	
+		    array(
+		      	'name' => 'Grotadmorv',
+		      	'number' => 89,
+		      	'description' => 'Grotadmorv dégage une odeur particulièrement atroce. Il n\'est pas rare de voir parmi un groupe de Tadmorv un imposant Grotadmorv. Dans les égouts, il ne dérange personne mais s\'il vient s\'infiltrer dans les canalisations, il provoque un bouchon. Il se nourrit de fruits pourris et de cadavres en décomposition. ',
+		      	'type' => array (
+		      		'Poison',
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Kokiyas',
+		      	'number' => 90,
+		      	'description' => 'Kokiyas est irrésistiblement attiré par la queue des Ramoloss. Dès qu\'il en voit une, il ne peut s\'empêcher de la mordre. S\'il est attaqué, il se réfugie dans sa coquille, ne l\'ouvrant que pour lancer des Pistolets à O. Sa langue analyse l\'environnement extérieur, il peut sentir la chaleur des autres Pokémons grâce à elle. ',
+		      	'type' => array (
+		      		'Eau',
+		      	)
+		    ),	
+		    array(
+		      	'name' => 'Crustabri',
+		      	'number' => 91,
+		      	'description' => 'Même si trois Nidoking piétinaient la coquille de Crustabri, elle ne céderait pas. Au combat, il la referme puissamment sur son ennemi, lui broyant les os. De nombreux plongeurs, dans l\'obscurité, se sont approchés de ce qu\'ils prenaient pour deux joyaux et sont morts brisés en deux en réalisant trop tard qu\'il s\'agissait des yeux d\'un Crustabri.',
+		      	'type' => array (
+		      		'Eau',
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Fantominus',
+		      	'number' => 92,
+		      	'description' => 'Le corps de Fantominus n\'est pas solide, il est uniquement gazeux. Il adore se réfugier dans les maisons abandonnées, et effrayer les visiteurs occasionnels avec des hallucinations. Quand il fait une attaque Léchouille, sa langue se matérialise par un phénomène inconnu. Il est impossible à atteindre par des attaques physiques. ',
+		      	'type' => array (
+		      		'Spectre',
+		      		'Poison'
+		      	)
+		    ),	
+		    array(
+		      	'name' => 'Spectrum',
+		      	'number' => 93,
+		      	'description' => 'Les Spectrum sauvages adorent effrayer les passants en faisant d\'horribles grimaces. Il est passé maître dans les attaques de type spectre, le rendant encore plus terrifiant. Apprivoisé, ce Pokémon est très fidèle et il ne perd pas une occasion de faire rire son dresseur. ',
+		      	'type' => array (
+		      		'Spectre',
+		      		'Poison'
+		      	)
+		    ), 
+		    array(
+		      	'name' => 'Ectoplasma',
+		      	'number' => 94,
+		      	'description' => 'Beaucoup de gens ont peur d\'Ectoplasma. Même avec un dresseur, il a tendance à garder un côté sombre et terrifiant. Dans le noir, ce Pokémon se téléporte sans cesse pour faire peur à son ennemi, ses deux yeux rouges brillants comme des lumières. Il l\'endort ensuite et dévore ses rêves les plus terrifiants. ',
+		      	'type' => array (
+		      		'Spectre',
+		      		'Poison'
+		      	)
+		    ),  
+		    array(
+		      	'name' => 'Onix',
+		      	'number' => 95,
+		      	'description' => 'Onix vit sous terre, en creusant à parfois 90 km/h. Son terrain de prédilection est la montagne, lui permettant d\'exposer sa large gamme d\'attaques de type sol et roche. Il vit en général loin des villages, mais un de ces Pokémon déclenche à chaque fois un cri d\'admiration lorsqu\'il est aperçu à l\'état sauvage. ',
+		      	'type' => array (
+		      		'Roche',
+		      		'Sol'
+		      	)
+		    ), 
+		    array(
+		      	'name' => 'Soporifik',
+		      	'number' => 96,
+		      	'description' => 'Soporifik a une mauvaise manie, qu\'il ne perd jamais même apprivoisé : il mange les rêves des hommes, il ne peut pas s\'en empêcher. S\'il mange un cauchemar, il tombe malade. Quand il a faim, il n\'attend pas de trouver une victime endormie : il s\'en charge lui même en l\'hypnotisant. ',
+		      	'type' => array (
+		      		'Psy'
+		      	)
+		    ),  
+		    array(
+		      	'name' => 'Hypnomade',
+		      	'number' => 97,
+		      	'description' => 'Hypnomade utilise son pendule pour hypnotiser ses adversaires. Une fois endormis, ceux-ci ne réalisent pas qu\'Hypnomade les soulèvent par la force de la pensée. Ils ne se réveillent que quand ils s\'écrasent contre un rocher. Quand ce Pokémon se concentre, il déclenche des maux de tête chez leur dresseur. ',
+		      	'type' => array (
+		      		'Psy'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Krabby',
+		      	'number' => 98,
+		      	'description' => 'Les Krabby vivent sur les berges des lacs, et sur les plages. Ils ne peuvent pas s\'empêcher de faire des bulles. Krabby paraît faible, mais ses pinces peuvent briser un rocher en mille morceaux. Ce Pokémon est incapable de se déplacer vers l\'avant : il ne sait marcher que latéralement. ',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+		    ),  
+		    array(
+		      	'name' => 'Krabboss',
+		      	'number' => 99,
+		      	'description' => 'Si une pince de Kraboss est coupée ou arrachée, celle-ci repousse plus grosse que la précédente. De mauvais dresseurs leur ont déjà coupé la pince pour que celle-ci devienne plus puissante. S\'il attrape sa proie, celle-ci est perdue : il la brise en deux en un instant. ',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Voltorbe',
+		      	'number' => 100,
+		      	'description' => ' La première fois qu\'on a aperçu Voltorbe, c\'était dans une usine de Pokéballs. Personne ne sait comment il est apparu sur terre. Il se déplace en roulant, en envoyant sans faire exprès quelques étincelles. Cette simili pokéball se défend grâce à des attaques Tonnerre et Grincement. ',
+		      	'type' => array (
+		      		'Electrik'
+		      	)
+		    ), 
+		    array(
+		      	'name' => 'Electrode',
+		      	'number' => 101,
+		      	'description' => 'Electrode se nourrit exclusivement de l\'électricité qui se trouve dans notre athmosphère. Il la stocke ensuite dans son corps sous une pression incroyable : il suffit qu\'il augmente encore plus la pression de son corps pour qu\'il explose. Les jours d\'orage, il explose sans arrêt car il mange trop d\'électricité. ',
+		      	'type' => array (
+		      		'Electrik'
+		      	)
+		    ),    
 	   );
 
 	    /* Insertion en base */

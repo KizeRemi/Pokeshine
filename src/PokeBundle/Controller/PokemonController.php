@@ -52,6 +52,31 @@ class PokemonController extends Controller
     }
 
     /**
+     * @Route("/pokemon/add/{id}", name="poke_add_shiny_pokemon")
+     */
+    public function editAction(Request $request, $id)
+    {
+        $session = new Session();
+        $em = $this->getDoctrine()->getEntityManager();
+        $pokemon = $em->getRepository('PokeBundle:Pokemon')->findOneByNumber($id);
+
+        $form = $this->createForm(PokemonType::class, $pokemon);
+        $form->handleRequest($request);
+
+        if ($form->isSubmitted() && $form->isValid()) {
+             $em = $this->getDoctrine()->getManager();
+             $em->persist($pokemon);
+             $em->flush();
+             $session->getFlashBag()->add('notice', 'Le pokemon a bien été modifié.');
+        }
+
+        return $this->render('PokeBundle:Admin:edit_poke.html.twig', array(
+            'pokemon' => $pokemon,
+            'form' => $form->createView()
+        ));
+    }
+
+    /**
      * @Route("/admin/pokemon/{id}", name="poke_admin_edit_pokemon")
      */
     public function editAction(Request $request, $id)
