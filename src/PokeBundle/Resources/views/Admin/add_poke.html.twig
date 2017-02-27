@@ -1,0 +1,16 @@
+{% extends "PokeBundle::layout.html.twig" %}
+
+{% block title %}
+PokeShine - Interface administrateur - Ajouter un pokemon!
+{% endblock %}
+{% block content %}
+<div class="title_admin"><h1>Ajouter un pokemon</h1></div>
+<div class="container_admin">
+	{% include 'PokeBundle:Admin:admin_menu.html.twig' %}
+	<div class="admin_bloc_container">
+		{{ form_start(form) }}
+		{{ form_widget(form) }}
+		{{ form_end(form) }}
+	</div>
+</div> 
+{% endblock content %}

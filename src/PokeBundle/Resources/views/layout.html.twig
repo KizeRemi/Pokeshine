@@ -1,0 +1,41 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}
+PokeShine - Accueil !
+{% endblock %}
+{% block body %}
+	<header class="header">
+			<div class="logo">
+				POKESHINE
+			</div>
+			<ul class="topnav">
+			  <li><a class="active" href="#home">Home</a></li>
+			  <li><a href="#news">News</a></li>
+			  <li><a href="#contact">Contact</a></li>
+			{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+				<li><a href="{{ path('poke_collector_pokemon', {'gen': 1, 'page': 1}) }}"> Ma collection </a></li>
+	            <li>Bonjour {{ app.user.username }} !
+	            <a href="{{ path('fos_user_security_logout') }}">
+	                    {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+	            </a></li>
+	        {% else %}
+	            <li><a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a></li>
+	            <li><a href="{{ path('fos_user_registration_register') }}">{{ 'layout.register'|trans({}, 'FOSUserBundle') }}</a></li>
+	        {% endif %}
+			{% if is_granted('ROLE_ADMIN') %} 
+				<li>
+					<a href="{{ path('poke_admin_index')}}" >Admin</a>
+				</li>
+			{% endif %}
+
+
+	    	</ul>
+	</header>
+		{% for flashMessage in app.session.flashbag.get('notice') %}
+
+		    {{ flashMessage }}
+
+		{% endfor %}
+	{% block content %}
+	{% endblock %}
+{% endblock %}

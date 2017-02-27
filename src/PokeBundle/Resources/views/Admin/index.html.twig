@@ -1,0 +1,28 @@
+{% extends "PokeBundle::layout.html.twig" %}
+
+{% block title %}
+PokeShine - Interface administrateur !
+{% endblock %}
+{% block content %}
+<div class="title_admin"><h1>Bienvenue sur l'interface Administrateur</h1></div>
+<div class="container_admin">
+	{% include 'PokeBundle:Admin:admin_menu.html.twig' %}
+	<div class="last_register">
+		<h2>Liste des 10 derniers inscrits</h2>
+		<table>
+			<tr>
+			    <th>Pseudo</th>
+			    <th>E-mail</th>
+			    <th>Dernière connexions</th>
+			</tr>
+		{% for user in users %}
+			<tr>
+	        	<td>{{ user.username|e }}</td>
+	        	<td>{{ user.email|e }}</td>
+	        	<td>{{ user.lastLogin|date("d/m/Y") }}</td>
+	    	</tr>
+	    {% endfor %}
+		</table>
+	</div>
+</div> 
+{% endblock content %}

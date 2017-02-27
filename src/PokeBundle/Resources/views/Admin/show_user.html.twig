@@ -1,0 +1,29 @@
+{% extends "PokeBundle::layout.html.twig" %}
+
+{% block title %}
+Gestion utilisateurs : Liste!
+{% endblock %}
+{% block content %}
+<div class="title_admin"><h1>Liste des utilisateurs</h1></div>
+<div class="container_admin">
+	{% include 'PokeBundle:Admin:admin_menu.html.twig' %}
+	<div class="admin_bloc_container">
+		<table>
+			<tr>
+			    <th>id</th>
+			    <th>Pseudo</th>
+			    <th>E-mail</th>
+			    <th>Derniere connexion</th>
+			</tr>
+		{% for user in users %}
+			<tr>
+	        	<td>{{ user.id|e }}</td>
+	        	<td>{{ user.username|e }}</td>
+	        	<td>{{ user.email }}</td>
+	        	<td>{{ user.lastLogin|date("d/m/Y") }}</td>	
+	    	</tr>
+	    {% endfor %}
+		</table>
+	</div>
+</div> 
+{% endblock content %}

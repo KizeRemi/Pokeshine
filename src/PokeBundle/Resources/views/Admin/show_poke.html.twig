@@ -1,0 +1,37 @@
+{% extends "PokeBundle::layout.html.twig" %}
+
+{% block title %}
+Pokemon Generation {{ gen }} : Voir !
+{% endblock %}
+{% block content %}
+<div class="title_admin"><h1>Liste des Pokemon</h1></div>
+<div class="container_admin">
+	{% include 'PokeBundle:Admin:admin_menu.html.twig' %}
+	<div class="admin_bloc_container">
+		<div class="admin_menu_gen">
+			<ul>
+				<li><a href="{{ path('poke_admin_show_pokemon', {'gen': 1}) }}">Generation 1</a></li>
+				<li><a href="#">Generation 2</a></li>
+				<li><a href="#">Generation 3</a></li>
+				<li><a href="#">Generation 4</a></li>
+				<li><a href="#">Generation 5</a></li>
+				<li><a href="#">Generation 6</a></li>
+				<li><a href="#">Generation 7</a></li>
+			</ul>
+		</div>
+
+		<div class="admin_bloc_content">
+			{% for pokemon in pokemons %}
+				<div class="admin_bloc_pokemon">
+					<h2>#{{ pokemon.number|e }}<br>{{ pokemon.name|e }}</h2>
+					<img src="{{ asset('images/pokemon/secret/secret_img_47.png') }}" alt="" />
+					<div>
+						<a href="#"><button>Shiny Hunters</button></a>
+						<a href="{{ path('poke_admin_edit_pokemon', {'id': pokemon.number}) }}"><button>Modifier</button></a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+</div> 
+{% endblock content %}

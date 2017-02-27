@@ -1,0 +1,71 @@
+{% extends "PokeBundle::layout.html.twig" %}
+
+{% block title %}
+Pokemon {{ pokemon.name }} : Modification !
+{% endblock %}
+{% block content %}
+<div class="title_admin"><h1>Modification de {{ pokemon.name }}</h1></div>
+<div class="container_admin">
+	{% include 'PokeBundle:Admin:admin_menu.html.twig' %}
+	<div class="admin_bloc_container">
+		<div class="admin_bloc_content">
+			<div class="admin_pokemon_show">
+				<div class="admin_pokemon_show_img">
+					<h2>Secret</h2>
+					{% set imgSecret = 'images/pokemon/secret/'~ pokemon.secretPathName %}
+					<img src="{{ asset(imgSecret) }}" alt="" />
+				</div>
+				<div class="admin_pokemon_show_img">
+					<h2>Shiny</h2>
+					{% set imgShiny = 'images/pokemon/shiny/'~ pokemon.shinyPathName %}
+					<img src="{{ asset(imgShiny) }}" alt="" />
+				</div>
+				<div class="admin_pokemon_show_description">
+					<h2>#{{ "%03d"|format(pokemon.number) }} {{ pokemon.name }}</h2>
+					<p>{{ pokemon.description }}</p>
+				</div>
+			</div>
+		</div>
+		<div class="admin_bloc_content">
+			{{ form_start(form )}}
+
+				<div class="admin_form_content input_align">
+					{{ form_label(form.number) }}
+					<div class="admin_form_input">{{ form_widget(form.number) }}</div>
+					<div class="form_error">{{ form_errors(form.number)}}</div>
+				</div>
+				<div class="admin_form_content">
+					{{ form_label(form.name) }}
+					<div class="admin_form_input">{{ form_widget(form.name) }}</div>
+					<div class="form_error">{{ form_errors(form.name)}}</div>
+				</div><br>
+				<div class="admin_form_content">
+					{{ form_label(form.description) }}
+					<div class="admin_form_input">{{ form_widget(form.description) }}</div>
+					<div class="form_error">{{ form_errors(form.description)}}</div>
+				</div><br>
+				<div class="admin_form_content input_align">
+					{{ form_label(form.generation) }}
+					<div class="admin_form_input">{{ form_widget(form.generation) }}</div>
+					<div class="form_error">{{ form_errors(form.generation)}}</div>
+				</div><br>
+				<div class="admin_form_content">
+					{{ form_label(form.pokemonTypes) }}
+					<div class="admin_form_input input_checkbox">{{ form_widget(form.pokemonTypes) }}</div>
+					<div class="form_error">{{ form_errors(form.pokemonTypes)}}</div>
+				</div><br>
+				<div class="admin_form_content">
+					{{ form_label(form.secretImgFile) }}
+					<div class="admin_form_input">{{ form_widget(form.secretImgFile) }}</div>
+					<div class="form_error">{{ form_errors(form.secretImgFile)}}</div>
+				</div><br>
+				<div class="admin_form_content">
+					{{ form_label(form.shinyImgFile) }}
+					<div class="admin_form_input">{{ form_widget(form.shinyImgFile) }}</div>
+					<div class="form_error">{{ form_errors(form.shinyImgFile)}}</div>
+				</div><br>
+			{{ form_end(form )}}
+		</div>
+	</div>
+</div> 
+{% endblock content %}

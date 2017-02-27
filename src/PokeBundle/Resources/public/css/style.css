@@ -1,0 +1,193 @@
+*{
+	box-sizing: border-box;
+}
+body{
+	font-family: 'robotoregular',sans-serif;
+	margin:0;
+	text-decoration: none;
+}
+ul{
+    margin: 0;
+    padding: 0;
+}
+li{
+    list-style: none;
+}
+h1,h2,h3{
+    margin:0;
+    text-transform: uppercase;
+}
+a{
+    text-decoration: none;
+}
+@font-face {
+    font-family: 'latoregular';
+    src: url('../../../../bundles/Poke/fonts/lato-regular-webfont.eot');
+    src: url('../../../../bundles/Poke/fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../../bundles/Poke/fonts/lato-regular-webfont.woff2') format('woff2'),
+         url('../../../../bundles/Poke/fonts/lato-regular-webfont.woff') format('woff'),
+         url('../../../../bundles/Poke/fonts/lato-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'robotoregular';
+    src: url('../../../../bundles/Poke/fonts/roboto-regular-webfont.eot');
+    src: url('../../../../bundles/Poke/fonts/roboto-regular-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../../bundles/Poke/fonts/roboto-regular-webfont.woff2') format('woff2'),
+         url('../../../../bundles/Poke/fonts/roboto-regular-webfont.woff') format('woff'),
+         url('../../../../bundles/Poke/fonts/roboto-regular-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+@font-face {
+    font-family: 'robotoblack';
+    src: url('../../../../bundles/Poke/fonts/roboto-black-webfont.eot');
+    src: url('../../../../bundles/Poke/fonts/roboto-black-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../../../../bundles/Poke/fonts/roboto-black-webfont.woff2') format('woff2'),
+         url('../../../../bundles/Poke/fonts/roboto-black-webfont.woff') format('woff'),
+         url('../../../../bundles/Poke/fonts/roboto-black-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+/* ANIMATION */
+
+@keyframes pulsecard {
+    from {
+        transform: scale(1);
+    }
+    to{
+        transform: scale(1.07);
+    }
+}
+.bloc_pokemon:hover{
+    -webkit-animation: as-basic-fast 2s linear infinite;
+    -moz-animation: as-basic-fast 2s linear infinite;
+    box-shadow: 0px 0px 20px 5px blue;
+    animation: as-basic-fast 2s linear infinite, pulsecard 0.2s linear forwards ;
+}
+
+@keyframes as-basic-fast {
+    0%, 100% {
+    -webkit-box-shadow: 0 0 10px 0 #000;
+    -moz-box-shadow: 0 0 10px 0 #000;
+    box-shadow: 0px 0px 10px 5px #FBC735;
+    }
+    50% {
+    -webkit-box-shadow: 0 0 7px 0 #000;
+    -moz-box-shadow: 0 0 7px 0 #000;
+    box-shadow: 0px 0px 20px 5px #F47957;
+    }
+}
+
+
+
+input{
+    height: 40px;
+    width:100%;
+    font-size: 18px;
+}
+select{
+    height: 40px;
+    font-size: 18px;
+}
+.form_error{
+    color:red;
+}
+header{
+    background-color:#1A2D7D;
+    text-align:center;
+    font-size:16pt;
+    line-height: 16px;
+    width:100%;
+    top:0;
+    left:0;
+    padding:10px 0px 10px 0px;
+    display: inline-flex;
+    text-transform: uppercase;
+}
+li > a{
+    color:white;
+}
+li > a:visited{
+    color:white;
+}
+.topnav{
+    display:inline-flex; 
+    list-style-type:none; 
+    margin:0px;
+    padding:0px;
+}
+
+.topnav li{
+    margin-left:50px;
+}
+
+.logo{ 
+    padding: 10px;
+    font-size:24pt;
+    color:#555;
+}
+.container_content{
+    max-width: 85rem;
+    background: #F5F5F5;
+    border: 1px solid grey;
+    margin: 1.25rem auto;
+}
+.bloc_generation{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.bloc_generation > li{
+    text-align: center;
+    padding: 0.2rem 1.25rem;
+}
+.bloc_generation > li > a > img{
+    max-width: 50px;
+}
+
+.pagination_pokemon{
+    background-color: #848484;
+    width: 7rem;
+    text-align: center;
+    font-size: 18px;
+    position: fixed;
+    display: flex;
+    flex-flow: column;
+    margin-top: 100px;    
+}
+.pagination_pokemon > li{
+    list-style: none;
+    padding: 10px;
+    border: 1px solid white;
+}
+.pagination_pokemon > li.active{
+    background-color: #BDBDBD;
+}
+.container_pokemon{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 100px;
+    padding: 0 50px;   
+}
+.bloc_pokemon{
+    padding: 2.5rem 2rem;
+    border-radius: 15px;
+    border: 1px solid blue;
+    margin: 15px 0px;
+}
+.vich-image > div{
+    width: 150px;
+    display: flex;
+}
+.vich-image > div > input{
+    width:100px;
+}
+.vich-image > div > input{
+    height: 34px;
+    font-size: 18px;
+    width: 15%;
+}

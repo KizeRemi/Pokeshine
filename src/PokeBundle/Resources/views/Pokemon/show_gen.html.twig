@@ -1,0 +1,51 @@
+{% extends 'PokeBundle::layout.html.twig' %}
+
+{% block title %}
+Ma collection : Generation 1 !
+{% endblock %}
+
+{% block content %}
+
+	<h1>Collector de shiny !</h1>
+	<ul class="pagination_pokemon">
+		{% set compteur = 0 %}
+		{% set min = 1 %}
+		{% for p in range(1, nbPages) %}
+			{% set compteur = compteur + nbPerPage %}
+			{% if compteur > nbTotalPerPokemon %}
+				{% set compteur = nbTotalPerPokemon[gen-1] %}	
+			{% endif %}
+			{% set pagination = min ~ '-' ~ compteur %}
+			<li{% if p == page %} class="active"{% endif %}>
+			  	<a href="{{ path('poke_collector_pokemon', {'gen': gen, 'page': p}) }}">{{ pagination  }}</a>
+			</li>
+			{% set min = min + nbPerPage %}
+		{% endfor %}
+	</ul>
+	<div class="container_content">
+		<div class="container_generation">
+			<ul class="bloc_generation">
+			{% for i in 1..7 %}
+				<li>
+					<h3><a href="{{ path('poke_collector_pokemon', {'gen': i, 'page': 1}) }}">Generation {{ i }}</a></h3>
+					<a href="{{ path('poke_collector_pokemon', {'gen': i, 'page': 1}) }}"><img src="{{ asset('images/pokemon/secret/secret_img_47.png') }}"/></a>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+		
+		<div class="container_pokemon">
+			{% for pokemon in pokemons %}
+				<div class="bloc_pokemon">
+					<h2>#{{ pokemon.number|e }}<br>{{ pokemon.name|e }}</h2>
+					<img src="{{ asset('images/pokemon/secret/secret_img_47.png') }}" alt="" />
+					<div>
+						<a href="{{ path('poke_admin_edit_pokemon', {'id': pokemon.number}) }}"><button>Modifier</button></a>
+					</div>
+				</div>
+			{% endfor %}
+		</div>
+
+	</div>
+
+{% endblock %}
