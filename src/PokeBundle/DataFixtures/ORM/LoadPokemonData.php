@@ -721,6 +721,138 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		      	'type' => array (
 		      		'Electrik'
 		      	)
+		    ),  
+		    array(
+		      	'name' => 'Noeunoeuf',
+		      	'number' => 102,
+		      	'description' => 'Un groupe de Noeunoeuf est toujours constitué de six membres solidaires, attirés entre eux comme des aimants. Si l\'un d\'entre eux se perd, ils utilisent leur énergie télépathique pour se retrouver. Comme ils n\'ont pas de jambes, il se déplacent en petits bonds organisés. La coquille fendue indique la prochaine évolution. ',
+		      	'type' => array (
+		      		'Plante',
+		      		'Psy'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Noadkoko',
+		      	'number' => 103,
+		      	'description' => 'Les Noadkokos vivent dans la jungle en bande. Leurs têtes sont chacune particulière, toutes ont leur propre sentiment. Quand l'une d'elle tombe, elle se transforme en Noeunoeuf et part immédiatement à la recherche d\'un groupe. Ce Pokémon utilise sa télépathie pour communiquer.  ',
+		      	'type' => array (
+		      		'Plante',
+		      		'Psy'
+		      	)
+		    ), 
+		    array(
+		      	'name' => 'Osselait',
+		      	'number' => 104,
+		      	'description' => 'Osselait porte toujours son casque en os sur la tête. Personne n\'a jamais vu ce Pokémon sans. Il fouille parmi les carcasses pour trouver un os, qu\'il utilisera comme massue. Il est très sensible, et se met à pleurer s\'il a faim, froid, soif ou peur mais quand il se bat, il peut être redoutable. ',
+		      	'type' => array (
+		      		'Sol'
+		      	)
+		    ),  
+		    array(
+		      	'name' => 'Ossatueur',
+		      	'number' => 105,
+		      	'description' => 'Ossatueur sait se servir de sa massue en os d\'une manière remarquable. Jadis, ces Pokémons étaient faibles mais depuis qu\'ils ont appris à manier les os, ils sont devenus craints par les autres Pokémon. Ossatueur peut l\'utiliser pour assommer ses ennemis, mais il peut aussi lancer son os comme un boomerang. ',
+		      	'type' => array (
+		      		'Sol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Kicklee',
+		      	'number' => 106,
+		      	'description' => 'Les jambes de Kicklee peuvent s\'allonger et se rétracter à volonté, comme des élastiques. C\'est un pro des arts martiaux, mais il se bat uniquement avec ses jambes. Seul, il s\'entraîne constamment à diverses attaques de type combat : Mawashi-guéri, Pied sauté ou Pied voltige. ',
+		      	'type' => array (
+		      		'Combat'
+		      	)
+		    ), 
+		    array(
+		      	'name' => 'Tygnon',
+		      	'number' => 107,
+		      	'description' => 'Tygnon aime taper avec ses poings. Il est très rapide, décochant à ses ennemis des coups fulgurants. S'il s'entraîne suffisamment, il peut maîtriser trois éléments, le rendant alors difficile à battre : Poing feu, Poing foudre et Poing glace. Son jeu de jambe lui permet d\'esquiver les coups. ',
+		      	'type' => array (
+		      		'Combat'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Excelangue',
+		      	'number' => 108,
+		      	'description' => 'La langue d\'Excelangue fait deux fois la taille de son corps. Ce Pokémon est un véritable glouton, il mange tout ce qu\'il voit, l\'attrapant en déroulant son immense langue. Il enregistre le goût dans sa mémoire, qu\'il n\'oublie jamais. Il produit une salive spéciale, qui paralyse tout ceux qui entrent en contact avec elle. ',
+		      	'type' => array (
+		      		'Normal'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Smogo',
+		      	'number' => 109,
+		      	'description' => 'Le corps de Smogo est principalement constitué de gaz toxiques. En respirer en petite quantité provoque des irritations et des reniflements mais une trop grosse dose peut s\'avérer mortelle. Il ne faut surtout pas l\'emmener dans un endroit chaud car sinon, il explose. ',
+		      	'type' => array (
+		      		'Poison'
+		      	)
+		    ), 
+		    array(
+		      	'name' => 'Smogogo',
+		      	'number' => 110,
+		      	'description' => 'Smogogo rôde près des poubelles pour aspirer les gaz d\'aliments pourris qui s\'en dégage, et sentir encore plus mauvais. Ce Pokémon est une association de deux Smogo ; si l\'une des têtes se gonfle, l\'autre se dégonfle. Ils mélangent en permanence leurs gaz mortels. ',
+		      	'type' => array (
+		      		'Poison'
+		      	)
+		    ),  
+		    array(
+		      	'name' => 'Rhinocorne',
+		      	'number' => 111,
+		      	'description' => 'Rhinocorne est un Pokémon très fort, mais pas très intelligent. Son petit cerveau ne peut penser qu\'à une seule chose à la fois. S\'il se met à charger, et qu\'il est distrait par quelque chose, il ne sait même plus pourquoi il attaque. Sa peau en pierre lui confère une immunité à toutes les attaques physiques. ',
+		      	'type' => array (
+		      		'Sol',
+		      		'Roche'
+		      	)
+		    ), 
+		    array(
+		      	'name' => 'Rhinoféros',
+		      	'number' => 112,
+		      	'description' => ' Rhinoféros acquiert plus d\'intelligence à l\'évolution. Sa peau est encore plus dure que de la pierre, un boulet de canon ne lui ferait même pas une égratignure, et il peut même prendre un bain de lave si ça lui chante. La corne sur le nez de Rhinoféros peut tourner très rapidement, il s\'en sert pour forer les montagnes. ',
+		      	'type' => array (
+		      		'Sol',
+		      		'Roche'
+		      	)
+		    ), 
+		    array(
+		      	'name' => 'Leveinard',
+		      	'number' => 113,
+		      	'description' => ' A l\'état sauvage, les Leveinard sont très rares et très farouches. Mais certaines personnes, il y a longtemps, ont réussi à les apprivoiser et depuis, on en trouve dans tous les centres Pokémon. Leurs œufs sont très nourrissants, c\'est un remède très connu pour soigner les maladies ou reprendre rapidement des forces. ',
+		      	'type' => array (
+		      		'Normal'
+		      	)
+		    ), 
+		    array(
+		      	'name' => 'Saquedeneu',
+		      	'number' => 114,
+		      	'description' => 'Le corps de Saquedeneu est recouvert par une épaisse masse de lianes bleues qui poussent en permanence. Elles sont très fragiles : si on tire trop fort dessus, elles cassent. Mais cela ne dérange pas Saquedeneu vu que ses lianes repoussent instantanément. En combat, il peut libérer des poudres toxiques. ',
+		      	'type' => array (
+		      		'Plante'
+		      	)
+		    ), 
+		    array(
+		      	'name' => 'Kangourex',
+		      	'number' => 115,
+		      	'description' => 'Kangourex est un des Pokémon les plus maternel. Il élève son petit dans sa poche ventrale, sous constante surveillance. Lorsqu\'on rencontre un bébé Kangourex qui joue tout seul, il est vivement conseillé de faire demi-tour car la mère est souvent tapie dans l\'ombre pour surveiller son petit. ',
+		      	'type' => array (
+		      		'Normal'
+		      	)
+		    ), 
+		    array(
+		      	'name' => 'Hypotrempe',
+		      	'number' => 116,
+		      	'description' => 'Hipotrempe résiste aux forts courants marins en s\'accrochant aux coraux ou aux pierres grâce à sa queue. Il se nourrit de mousse, mais son repas préféré reste les insectes volant. Il sort sa tête de l\'eau, et attends qu\'il passe un insecte pour lui cracher un jet d\'encre.',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+		    ),  
+		    array(
+		      	'name' => 'Hypocean',
+		      	'number' => 117,
+		      	'description' => 'Les aiguillons sur le dos d\'Hypocéan sont empoisonnés. S\'il est dérangé, il crache un jet d\'encre pour s'enfuir mais si l\'agresseur persiste, il lui envoie une rafale de piquants venimeux. Pour dormir, il s\'ancre solidement aux rochers avec sa queue en spirale. ',
+		      	'type' => array (
+		      		'Eau'
+		      	)
 		    ),    
 	   );
 
