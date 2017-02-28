@@ -27,7 +27,7 @@ Pokemon Generation {{ gen }} : Voir !
 					<img src="{{ asset('images/pokemon/secret/secret_img_47.png') }}" alt="" />
 					<div>
 						<a href="#"><button>Shiny Hunters</button></a>
-						<a href="{{ path('poke_admin_edit_pokemon', {'id': pokemon.number}) }}"><button>Modifier</button></a>
+						<a href="{{ path('poke_admin_edit_pokemon', {'slug': pokemon.slug}) }}"><button>Modifier</button></a>
 					</div>
 				</div>
 			{% endfor %}

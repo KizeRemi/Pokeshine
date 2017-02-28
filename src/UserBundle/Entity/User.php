@@ -4,6 +4,7 @@ namespace UserBundle\Entity;
 
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * @ORM\Entity
@@ -24,10 +25,15 @@ class User extends BaseUser
     */
     private $friendCode;
 
+    /**
+     * @ORM\OneToMany(targetEntity="PokeBundle\Entity\Shiny", mappedBy="user")
+     */
+    private $shinies;
+
     public function __construct()
     {
         parent::__construct();
-        // your own logic
+        $this->shinies = new ArrayCollection();
     }
 
     /**
@@ -52,5 +58,39 @@ class User extends BaseUser
     public function getFriendCode()
     {
         return $this->friendCode;
+    }
+
+    /**
+     * Add shiny
+     *
+     * @param \PokeBundle\Entity\Shiny $shiny
+     *
+     * @return User
+     */
+    public function addShiny(\PokeBundle\Entity\Shiny $shiny)
+    {
+        $this->shinies[] = $shiny;
+
+        return $this;
+    }
+
+    /**
+     * Remove shiny
+     *
+     * @param \PokeBundle\Entity\Shiny $shiny
+     */
+    public function removeShiny(\PokeBundle\Entity\Shiny $shiny)
+    {
+        $this->shinies->removeElement($shiny);
+    }
+
+    /**
+     * Get shinies
+     *
+     * @return \Doctrine\Common\Collections\Collection
+     */
+    public function getShinies()
+    {
+        return $this->shinies;
     }
 }

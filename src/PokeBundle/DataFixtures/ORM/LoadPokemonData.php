@@ -282,7 +282,7 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		      	'number' => 50,
 		      	'description' => 'Les Taupiqueur sont des créatures petites qui bougent en creusant dans le sol. Ils sont affaiblis par la lumière du soleil en raison de leur peau très fine et vivent sous terre, généralement à 1 mètre de profondeur ou dans des grottes, pour s\'en protéger. Là où ils creusent, la terre est plus fertile car elle est labourée. Ils se nourrissent de racines de plantes et ils remontent rarement à la surface. Leur tête sort approximativement de 20 cm au-dessus du sol. Toutefois, leur véritable taille reste à ce jour un mystère.',
 		      	'type' => array (
-		      		'sol'
+		      		'Sol'
 		      	)
 		    ),            
 		    array(
@@ -290,7 +290,7 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		      	'number' => 51,
 		      	'description' => 'Évolution de Taupiqueur, Triopikeur est une association de trois Taupiqueur. Ils creusent beaucoup plus rapidement, et peuvent parfois, s\'ils sont courroucés, lancer un puissant séisme2. Chacun pense exactement comme les deux autres, chaque tête creusant le sol à tour de rôle dans une coopération parfaite et inlassable. Il peut atteindre des profondeurs de 100 kilomètres.',
 		      	'type' => array (
-		      		'sol'
+		      		'Sol'
 		      	)
 		    ),
 		    array(
@@ -298,7 +298,7 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		      	'number' => 52,
 		      	'description' => 'Miaouss est un Pokémon qui préfère largement vivre dans les villes plutôt que dans la nature. Il fouille les poubelles et se nourrit des déchets qu\'il y trouve. Apprivoisé, il passe son temps sur les genoux de son maître à se faire caresser. Beaucoup essayent de le forcer à utiliser son attaque Jackpot, mais Miaouss est trop rusé pour accepter. ',
 		      	'type' => array (
-		      		'normal'
+		      		'Normal'
 		      	)
 		    ),
 		    array(
@@ -306,7 +306,7 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		      	'number' => 53,
 		      	'description' => 'Un Persian apprivoisé a le même caractère que son maître. Si celui-ci est mauvais, le Pokémon devient vite arrogant et agressif, sauf avec lui. Sauvage, il se tapit dans les hautes herbes et bondit brusquement, toutes griffes sorties, sur la malheureuse proie. Ses griffes acérées ne laissent aucune chance à la victime. ',
 		      	'type' => array (
-		      		'normal'
+		      		'Normal'
 		      	)
 		    ),
 		    array(
@@ -314,7 +314,7 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		      	'number' => 54,
 		      	'description' => 'Psykokwak est un étrange Pokémon mi-aquatique, mi-psy. Ce pauvre Pokémon a la migraine en permanence, et quand celle-ci atteint son paroxysme, il utilise de puissants pouvoirs psy sans s\'en rendre compte. Il maîtrise alors l\'attaque Choc mental avec perfection. ',
 		      	'type' => array (
-		      		'eau'
+		      		'Eau'
 		      	)
 		    ),
 		    array(
@@ -322,7 +322,7 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		      	'number' => 55,
 		      	'description' => 'Akwakwak est un excellent nageur, qui aime s\'entraîner à nager contre les courants marins pour se muscler. La perle sur son front lui prodigue de puissants pouvoirs psy, et les griffes au bout de ses pattes sont acérées. Beaucoup de dresseurs de Pokémons aquatiques aimeraient en posséder un.  ',
 		      	'type' => array (
-		      		'eau'
+		      		'Eau'
 		      	)
 		    ),
 		    array(
@@ -506,14 +506,6 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		      	'name' => 'Ponyta',
 		      	'number' => 77,
 		      	'description' => 'Peu de temps après la naissance, Ponyta est capable de courir aussi vite que sa mère. Courir le rend heureux, sa crinière s\'embrase joyeusement quand il galope. Si son maître ne le fait pas suffisamment défouler, il dépérit rapidement. S\'il se fait agresser, les sabots de Ponyta peuvent fracasser le crâne de son adversaire. ',
-		      	'type' => array (
-		      		'Feu'
-		      	)
-		    ),
-		    array(
-		      	'name' => 'Galopa',
-		      	'number' => 78,
-		      	'description' => 'Au galop, la vitesse maximale d\'un Galopa est de 240 km/h. S\'il est en confiance, sa crinière n\'est pas brûlante et il aime être monté. Il a sans cesse besoin de se prouver qu\'il est le plus rapide, c\'est pour cela qu\'il défie tout ce qui bouge dans une course, où il sort vainqueur à chaque fois. ',
 		      	'type' => array (
 		      		'Feu'
 		      	)
@@ -734,7 +726,7 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		    array(
 		      	'name' => 'Noadkoko',
 		      	'number' => 103,
-		      	'description' => 'Les Noadkokos vivent dans la jungle en bande. Leurs têtes sont chacune particulière, toutes ont leur propre sentiment. Quand l'une d'elle tombe, elle se transforme en Noeunoeuf et part immédiatement à la recherche d\'un groupe. Ce Pokémon utilise sa télépathie pour communiquer.  ',
+		      	'description' => 'Les Noadkokos vivent dans la jungle en bande. Leurs têtes sont chacune particulière, toutes ont leur propre sentiment. Quand l\'une d\'elle tombe, elle se transforme en Noeunoeuf et part immédiatement à la recherche d\'un groupe. Ce Pokémon utilise sa télépathie pour communiquer.  ',
 		      	'type' => array (
 		      		'Plante',
 		      		'Psy'
@@ -767,7 +759,7 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		    array(
 		      	'name' => 'Tygnon',
 		      	'number' => 107,
-		      	'description' => 'Tygnon aime taper avec ses poings. Il est très rapide, décochant à ses ennemis des coups fulgurants. S'il s'entraîne suffisamment, il peut maîtriser trois éléments, le rendant alors difficile à battre : Poing feu, Poing foudre et Poing glace. Son jeu de jambe lui permet d\'esquiver les coups. ',
+		      	'description' => 'Tygnon aime taper avec ses poings. Il est très rapide, décochant à ses ennemis des coups fulgurants. S\'il s\'entraîne suffisamment, il peut maîtriser trois éléments, le rendant alors difficile à battre : Poing feu, Poing foudre et Poing glace. Son jeu de jambe lui permet d\'esquiver les coups. ',
 		      	'type' => array (
 		      		'Combat'
 		      	)
@@ -849,7 +841,7 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		    array(
 		      	'name' => 'Hypocean',
 		      	'number' => 117,
-		      	'description' => 'Les aiguillons sur le dos d\'Hypocéan sont empoisonnés. S\'il est dérangé, il crache un jet d\'encre pour s'enfuir mais si l\'agresseur persiste, il lui envoie une rafale de piquants venimeux. Pour dormir, il s\'ancre solidement aux rochers avec sa queue en spirale. ',
+		      	'description' => 'Les aiguillons sur le dos d\'Hypocéan sont empoisonnés. S\'il est dérangé, il crache un jet d\'encre pour s\'enfuir mais si l\'agresseur persiste, il lui envoie une rafale de piquants venimeux. Pour dormir, il s\'ancre solidement aux rochers avec sa queue en spirale. ',
 		      	'type' => array (
 		      		'Eau'
 		      	)

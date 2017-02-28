@@ -6,6 +6,8 @@ use Symfony\Component\Validator\Constraints as Assert;
 use Vich\UploaderBundle\Mapping\Annotation as Vich;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\File\File as File;
+use Gedmo\Mapping\Annotation as Gedmo;
+
 /**
  * Pokemon
  *
@@ -32,7 +34,7 @@ class Pokemon
     * @ORM\Column(name="generation", type="integer", nullable=false)
     */
     private $generation;
-
+    
     /**
     * @ORM\Column(name="name", type="string", nullable=false)
     */
@@ -42,6 +44,12 @@ class Pokemon
     * @ORM\Column(name="description", type="text", nullable=false)
     */
     private $description;
+
+    /**
+    * @Gedmo\Slug(fields={"name", "generation"})
+    * @ORM\Column(length=128, unique=true)
+    */
+    private $slug;
 
     /**
      * @Assert\File(
@@ -391,5 +399,14 @@ class Pokemon
     public function getShinyPathName()
     {
         return $this->shinyPathName;
+    }
+    /**
+     * Get slug
+     *
+     * @return string
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
