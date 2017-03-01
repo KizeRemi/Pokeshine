@@ -845,7 +845,292 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 		      	'type' => array (
 		      		'Eau'
 		      	)
+		    ),   
+		    array(
+		      	'name' => 'Poissirène',
+		      	'number' => 118,
+		      	'description' => 'Poissirène est un magnifique Pokémon doté de nageoires qui ondulent avec grâce dans le courant. Il à longtemps été considéré comme le symbole de la grâce et de la beauté. Cependant il peut être un adversaire redoutable car quand il charge, sa corne est dirigée vers l\'avant pour faire front.',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Poissoroy',
+		      	'number' => 119,
+		      	'description' => 'L\'automne est la saison nuptiale des Poissoroy. On peut les voir en grand groupes dans les rivières pour essayer de plaire aux femelles. C\'est pendant cette saison que ses nageoires prennent les plus belles couleurs. Il défend sa femelle avec fougue, en lançant des attaques Empal\'corne ou Coud\'korne.',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+		    ),  
+		    array(
+		      	'name' => 'Stari',
+		      	'number' => 120,
+		      	'description' => 'Stari est un étrange Pokémon, constitué d\'un seul organe principal : un magnifique joyau qui brille de mille feux, le cœur. Ces mystérieuses créatures ont le pouvoir de se régénérer entièrement, tant que le cœur est intact : si une de ses pattes tombe, elle est immédiatement reformée.',
+		      	'type' => array (
+		      		'Eau'
+		      	)
 		    ),    
+		    array(
+		      	'name' => 'Staross',
+		      	'number' => 121,
+		      	'description' => 'Le cœur de Stari a évolué pour donner un joyaux encore plus resplendissant et un nouveau pokémon : Staross. Son joyaux brille de différentes couleurs en fonction de la lumière, de l\'angle de vue et de l\'humeur du Pokémon. Si celui-ci est brisé durant un combat, il meurt.',
+		      	'type' => array (
+		      		'Eau',
+		      		'Psy'
+		      	)
+		    ),  
+		    array(
+		      	'name' => 'M.Mime',
+		      	'number' => 122,
+		      	'description' => 'Mr mime est passionné par le fait d\'imiter des choses invisibles. Ses doigts produisent une onde chimique qui rend l\'air palpable, et avec le temps et l\'expérience, il peut devenir capable de créer de véritables objets. Ne le dérangez jamais en train de mimer, car sinon il vous punira avec une volée de claques.',
+		      	'type' => array (
+		      		'Psy'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Insécateur',
+		      	'number' => 123,
+		      	'description' => 'Insecateur possède deux armes meurtrières : sa vitesse combinée avec l\'utilisation de ses lames. Les petites ailes sur son dos sont incapables de le faire voler sur une longue distance, mais elles lui donnent une vitesse si impressionnante que lorsqu\'il il se déplace, il donne l\'illusion d\'être en groupe. Ses lames couperaient un tronc d\'arbre d\'un seul coup.',
+		      	'type' => array (
+		      		'Insecte',
+		      		'Vol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Lippoutou',
+		      	'number' => 124,
+		      	'description' => 'Lippoutou est un étrange Pokémon humanoïde, qui se déhanche de droite à gauche d\'une drôle de façon en marchant. Les gens qui le croisent sont soudains pris d\'une envie de se déhancher comme lui, c\'est un phénomène inexpliqué. Il aime par dessus tout embrasser les gens, mais s\'il le souhaite, il peut les paralyser ainsi.',
+		      	'type' => array (
+		      		'Glace',
+		      		'Psy'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Elektek',
+		      	'number' => 125,
+		      	'description' => 'Comme beaucoup de Pokémons Electriks, Elektek se regroupe sur les hauteurs en cas d\'orages. C\'est un combattant qui fait sortir l\'électricité par ses deux antennes placées sur son front. En faisant parcourir ainsi le courant sur son corps, il devient impossible à toucher physiquement, sous peine d\'électrocution.',
+		      	'type' => array (
+		      		'Electrik'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Magmar',
+		      	'number' => 126,
+		      	'description' => 'Dans les volcans en activités, vous pourriez trouver des Magmar en train de prendre un bain de lave. Ces Pokémons sont totalement insensibles à la chaleur, puisque leur corps est en constante fusion. Il suffit qu\'un combat démarre pour que son corps s\'embrase violemment.',
+		      	'type' => array (
+		      		'Feu'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Scarabrute',
+		      	'number' => 127,
+		      	'description' => 'La pince située sur la tête de Scarabrute est incroyablement puissante. Il peut exercer une pression de plusieurs tonnes avec, mais il est beaucoup plus faible pour l\'ouvrir. Au cas où il ne parviendrais pas à écraser sa proie, il la secoue méchamment et la jette dans les airs.',
+		      	'type' => array (
+		      		'Insecte'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Tauros',
+		      	'number' => 128,
+		      	'description' => 'Souvent utilisé pour les travaux manuels, comme tirer des charrues, Tauros est pourtant un Pokémon très excité. Il a parfois besoin de tout saccager sur son passage pour se calmer. Les Tauros se battent violemment entre eux pour désigner le mâle dominant du troupeau.',
+		      	'type' => array (
+		      		'Normal'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Magicarpe',
+		      	'number' => 129,
+		      	'description' => 'On raconte qu\'autrefois, Magicarpe était beaucoup plus puissant qu\'aujourd\'hui. Il ne sait faire que des ronds et des bonds dans l\'eau. Il est malheureusement devenu célèbre pour son inutilité…cet étrange Pokémon a poussé de nombreux chercheurs a étudier son cas, mais aucune théorie plausible n\'a été avancée.',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Leviator',
+		      	'number' => 130,
+		      	'description' => 'Terrifiant et puissant, Leviator peut rentrer dans des aspects de rage terrifiant : raser une ville entière ne lui fait pas peur, et de nombreux récit historiques racontent que pendant les guerres, il apparaissait et rasait des régions entières.. Personne ne sait expliquer comment un ridicule Magicarpe peut se transformer en un monstre si terrible.',
+		      	'type' => array (
+		      		'Eau',
+		      		'Vol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Lokhlass',
+		      	'number' => 131,
+		      	'description' => 'Magnifique pokémon, Lokhlass est pourtant en voie d\'extinction. D\'une nature gentille et généreuse, il transporte les gens par delà les océans. S\'il est de bonne humeur, Lokhlass chantonne gaiement une agréable mélodie aiguë. Le soir par contre, sa mélodie est beaucoup plus triste : il appelle ses rares congénères.',
+		      	'type' => array (
+		      		'Eau',
+		      		'Glace'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Metamorph',
+		      	'number' => 132,
+		      	'description' => 'Métamorph a une structure moléculaire surprenante : ce Pokémon sait la modifier pour se transformer en n\'importe quoi. Comparez un véritable Pokémon à sa copie, et vous verrez qu\'il est exactement pareil. Il se trompe parfois s\'il se transforme de mémoire. Si vous faites rire un Métamorph, il ne pourra pas rester déguisé.',
+		      	'type' => array (
+		      		'Normal'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Evoli',
+		      	'number' => 133,
+		      	'description' => 'Evoli est un Pokémon étrange, car il évolue en 7 formes différentes selon les conditions. Sa structure moléculaire instable le fait évoluer dès qu\'il rencontre un objet attribué à un environnement particulier. Très attachant, beaucoup de foyers l\'apprécient comme animal de compagnie mais il devient de plus en plus rare à l\'état sauvage.',
+		      	'type' => array (
+		      		'Normal'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Aquali',
+		      	'number' => 134,
+		      	'description' => 'Des nageoires et des branchies sont apparues sur le corps d\'Aquali, lui permettant de vivre dans les fonds marins. Il est étroitement lié avec l\'eau, car sa structure moléculaire en est proche. S\'il va se mettre à pleuvoir, ses nageoires frémissent doucement. En se concentrant, il peut manipuler l\'eau à volonté.',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Voltali',
+		      	'number' => 135,
+		      	'description' => 'Si vous vous approchez de près d\'un Voltali, vous pourrez entendre le bruit du courant électrique passant dans sa fourrure électrisée. Capable de créer un formidable courant grâce à ses poils, on peut voir qu\'il est prêt à attaquer quand ceux-ci sont tous hérissés. Sa fourrure fait aussi office d\'aiguillons prêts à être projetés.',
+		      	'type' => array (
+		      		'Electrik'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Pyroli',
+		      	'number' => 136,
+		      	'description' => 'Pyroli utilise sa fourrure pour faire baisser sa chaleur interne, qui peut atteindre les 900 degrés. Mais s\'il est excité ou énervé, il avoisine facilement les 1600 degrés. Cracher trop de flammes peut lui être dangereux, car si sa température baisse trop, il meurt. Ses poils ne s\'emmêlent jamais car la chaleur les rend lisse.',
+		      	'type' => array (
+		      		'Feu'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Porygon',
+		      	'number' => 137,
+		      	'description' => 'Pokémon artificiel, Porygon est un des Pokémons les plus rares. Comme il ne respire pas, ne mange pas, ne boit pas, il peut survivre n\'importe où, y compris dans l\'espace. Il se décompile pour rentrer à l\'état de programme dans le cyber-espace. Des internautes affirment avoir vu ce Pokémon un instant dans leurs fichiers, puis disparaître.',
+		      	'type' => array (
+		      		'Normal'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Amonita',
+		      	'number' => 138,
+		      	'description' => 'Pokémon artificiel, Porygon est un des Pokémons les plus rares. Comme il ne respire pas, ne mange pas, ne boit pas, il peut survivre n\'importe où, y compris dans l\'espace. Il se décompile pour rentrer à l\'état de programme dans le cyber-espace. Des internautes affirment avoir vu ce Pokémon un instant dans leurs fichiers, puis disparaître.',
+		      	'type' => array (
+		      		'Normal'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Amonistar',
+		      	'number' => 139,
+		      	'description' => 'Le dernier Amonita est mort il y a des millions d\'années. D\'après l\'étude de ses fossiles, il avait exactement dix tentacules, qu\'il utilisait tantôt pour nager, tantôt pour attraper le plancton dont il se nourrissait. Amonita gérait l\'air de sa coquille pour couler ou faire surface.',
+		      	'type' => array (
+		      		'Roche',
+		      		'Eau'
+		      	)
+		    ),		    
+		    array(
+		      	'name' => 'Amonistar',
+		      	'number' => 140,
+		      	'description' => 'Vivant à la même époque qu\'Amonita, on a longtemps cru que Kabuto avait disparu jusqu\'à ce que l\'on retrouve un spécimen vivant. Quand il est caché au fond de l\'eau, il utilise les yeux sur son dos pour voir ce qu\'il l\'entoure. Ses petites pattes sont très pratiques pour arpenter le fond marin.',
+		      	'type' => array (
+		      		'Roche',
+		      		'Eau'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Kabuto',
+		      	'number' => 141,
+		      	'description' => 'Kabutops était un excellent nageur. Dans l\'eau, il se recroquevillait sur ses jambes et il agitait sa coquille pour nager à très grande vitesse. Ses longues griffes acérées se sont mutées en lames tranchantes, qu\'il utilise pour découper ses proies. Certains scientifiques pensent qu\'il est l\'ancêtre d\'Insecateur.',
+		      	'type' => array (
+		      		'Roche',
+		      		'Eau'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Ptera',
+		      	'number' => 142,
+		      	'description' => 'Ptéra était le roi des cieux à l\'époque préhistorique, mais il a aujourd\'hui disparu. On sait qu\'il employait sa gueule garnie de crocs pour égorger ses victimes. Il arpentait les cieux préhistoriques en étirant ses longues ailes, en se laissant porter par les courant chauds. On pense qu\'il était d\'une nature très agressive.',
+		      	'type' => array (
+		      		'Roche',
+		      		'Vol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Ronflex',
+		      	'number' => 143,
+		      	'description' => 'Ronflex est un Pokémon très pacifique, mais très paresseux aussi. Ses principales préoccupations de la journée sont dormir et manger. Son incroyable estomac est capable de digérer n\'importe quoi, même le plus mortel des poisons. Ce Pokémon préfère faire la sieste plutôt que de se battre.',
+		      	'type' => array (
+		      		'Normal'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Artikodin',
+		      	'number' => 144,
+		      	'description' => 'Artikodin est l\'oiseau légendaire qui contrôle la glace éternelle. Quand il vole, il givre l\'air et l\'eau tout autour de lui, ce qui crée une légère neige poudreuse dans son sillage. Ce Pokémon vole gracieusement, en ondulant délicatement sa longue et magnifique queue derrière lui.',
+		      	'type' => array (
+		      		'Glace',
+		      		'Vol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Electhor',
+		      	'number' => 145,
+		      	'description' => 'Electhor est l\'oiseau légendaire de la foudre. Il est très impressionnant de le voir voler car il est suivi par d\'immenses nuages noirs. La plupart du temps, il se cache dedans et déclenche de violents orages. S\'il vole à découvert, vous pourrez voir des étincelles jaillir de ses ailes électrisées.',
+		      	'type' => array (
+		      		'Electrik',
+		      		'Vol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Sulfura',
+		      	'number' => 146,
+		      	'description' => 'Etroitement lié aux volcans, Sulfura est l\'oiseau légendaire du feu. On raconte qu\'il aide les voyageurs égarés dans la montagne. Ses ailes en feu s\'embrasent quand il bat des ailes. Si dans la nuit vous apercevez une boule de feu voler à toute allure, il s\'agit de l\'oiseau légendaire du feu.',
+		      	'type' => array (
+		      		'Feu',
+		      		'Vol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Minidraco',
+		      	'number' => 147,
+		      	'description' => 'Pendant ses nombreuses périodes de mue, Minidraco est fragile. Il se cache derrière les cascades pour se protéger. Longtemps considéré comme légendaire, une colonie a pourtant été découverte dans les océans par un pêcheur. Rare malgré tout, il est férocement protégé par les autorités.',
+		      	'type' => array (
+		      		'Dragon'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Draco',
+		      	'number' => 148,
+		      	'description' => 'Draco est un Pokémon mythique, qui emmagasine le plus d\'énergie possible. En déchargeant celle-ci dans ses cristaux, il est capable de faire varier le climat. Il est entouré d\'une aura blanche quand la météo change. Solitaire, c\'est un Pokémon farouche : peu de gens l\'ont déjà vu sauvage.',
+		      	'type' => array (
+		      		'Dragon'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Dracolosse',
+		      	'number' => 149,
+		      	'description' => 'Certains pêcheurs affirment s\'être fait sauver de la noyade par un Dracolosse sauvage. C\'est un Pokémon marin extrêmement rare au grand cœur. Sa carrure impressionnante le met à l\'abri de toute attaque. Déchaîner sa colère serait la pire chose à faire, car malgré son tempérament pacifique, il maîtrise des attaques dévastatrices comme Colère.',
+		      	'type' => array (
+		      		'Dragon',
+		      		'Vol'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Mewtwo',
+		      	'number' => 150,
+		      	'description' => 'Mewtwo est un terrible Pokémon qui vient d\'expériences génétiques horribles et malsaines. Créé pour le combat, il ne connaît ni la pitié, ni la défaite. Ses puissants pouvoirs psychiques peuvent aller jusqu\'à déclencher des variations météorologiques partout dans le monde. Il est unique.',
+		      	'type' => array (
+		      		'Psy'
+		      	)
+		    ),
+		    array(
+		      	'name' => 'Mew',
+		      	'number' => 151,
+		      	'description' => 'On sait très peu de choses sur Mew. Il est dit qu\'autrefois, ils étaient nombreux, mais ils auraient tous disparus sauf 1. Ce Pokémon mythique peut apprendre toutes les capacités, c\'est pour cela que certains pensent qu\'il est l\'ancêtre de tous les Pokémon. Pacifique, il passe son temps à jouer et à s\'amuser.',
+		      	'type' => array (
+		      		'Psy'
+		      	)
+		    ),
 	   );
 
 	    /* Insertion en base */
