@@ -34,10 +34,14 @@ class PokemonController extends Controller
 
         $em = $this->getDoctrine()->getEntityManager();
         $pokemons = $em->getRepository('PokeBundle:Pokemon')->getPokemonsByGeneration($gen,$page,$nbPerPage);
-
-        $shinies = $em->getRepository('PokeBundle:Shiny')->findByUser($user);
+        $shinies = $user->getShinies();
         $nbPages = ceil(count($pokemons)/$nbPerPage);
-        \Doctrine\Common\Util\Debug::dump($shinies);
+        foreach($shinies as $shiny){
+          $myShinies[] = $shiny->getPokemon();
+        }
+        
+
+        \Doctrine\Common\Util\Debug::dump($myShinies);
         if ($page > $nbPages) {
             throw $this->createNotFoundException("La page n'existe pas.");
         }
@@ -53,7 +57,7 @@ class PokemonController extends Controller
             'gen' => $gen,
             'nbPerPage' => $nbPerPage,
             'nbTotalPerPokemon' => $nbTotalPerPokemon,
-            'shinies' => $shinies
+            'shinies' => $myShinies
         ));
     }
 

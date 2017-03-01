@@ -32,7 +32,7 @@ class Shiny
 	private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="PokeBundle\Entity\Pokemon")
+     * @ORM\ManyToOne(targetEntity="PokeBundle\Entity\Pokemon", inversedBy="shinies")
      * @ORM\JoinColumn(name="pokemon_id", referencedColumnName="id")
      */
     private $pokemon;

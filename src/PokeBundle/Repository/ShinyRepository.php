@@ -10,4 +10,12 @@ namespace PokeBundle\Repository;
  */
 class ShinyRepository extends \Doctrine\ORM\EntityRepository
 {
+	public function getShiniesbyUser($user){
+
+		$query =  $this ->createQueryBuilder('s')
+						->select('s.pokemon as pokemon');
+
+
+		return $query->getQuery()->getResult();
+	}
 }
