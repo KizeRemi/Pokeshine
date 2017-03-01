@@ -605,6 +605,261 @@ class LoadPokemonData2 extends AbstractFixture implements OrderedFixtureInterfac
 		      		'Sol'
 		      	)
 		    ),
+           array(    
+		      	'name' => 'Corayon',
+		      	'number' => 222,
+		      	'description' => 'Les Corayon se rassemblent dans les mers chaudes, offrant ainsi un abri idéal aux plus petits PokÈmon. Quand la tempÈrature baisse, ce PokÈmon migre vers les mers du sud.',
+		      	'type' => array (
+		      		'Eau',
+                    'Roche'
+		      	)
+               ), 
+           array(    
+		      	'name' => 'Remoraid',
+		      	'number' => 223,
+		      	'description' => 'Remoraid aspire de l\'eau, puis la recrache à forte pression grâce à ses muscles abdominaux pour attaquer les proies volantes. Quand son évolution approche, ce PokÈmon descend le courant des rivières.',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+               ), 
+           array(    
+		      	'name' => 'Octillery',
+		      	'number' => 224,
+		      	'description' => 'Octillery attrape son ennemi avec ses tentacules. Ce Pokemon essaie de l\'immobiliser avant de lui asséner le coup final. Si líennemi síavËre trop fort, Octillery lui crache de l\'encre à la figure et s\'échappe.',
+		      	'type' => array (
+		      		'Eau'
+		      	)
+               ), 
+            array(    
+		      	'name' => 'Cadoizo',
+		      	'number' => 225,
+		      	'description' => 'Cadoizo transporte sa nourriture dans sa queue. Il y a longtemps, un célëbre explorateur réussit à le sommet de la plus haute montagne du monde grâce à un de ces Pokemon, qui partagea sa nourriture avec lui.',
+		      	'type' => array (
+		      		'Glace',
+                    'Vol'
+		      	)
+                ), 
+            array(    
+		      	'name' => 'Demanta',
+		      	'number' => 226,
+		      	'description' => 'Les jours de beau temps, on peut voir des bancs de Demanta sauter au-dessus des vagues. Le Remoraid qui líaccompagne ne dÈrange pas ce Pokemon.',
+		      	'type' => array (
+		      		'Eau',
+                    'Vol'
+		      	)
+                ), 
+            array(    
+		      	'name' => 'Airmure',
+		      	'number' => 227,
+		      	'description' => 'Les ailes d\'acier díAirmure síabÓment et se cabossent à force de se battre. Une fois par an, les ailes endommagées repoussent complËtement, rendant à leurs bords tranchants leur état d\'origine.',
+		      	'type' => array (
+		      		'Acier',
+                    'Vol'
+		      	)
+                ), 
+            array(    
+		      	'name' => 'Malosse',
+		      	'number' => 228,
+		      	'description' => 'Les Malosse chassent en meute organisée. Ils communiquent entre eux grâce à une série de petits cris pour encercler leur proie. L\'étonnant travail d\'équipe de ces Pokemon est sans comparaison.',
+		      	'type' => array (
+		      		'Feu',
+                    'Ténèbres '
+		      	)
+                ), 
+            array(    
+		      	'name' => 'DÈmolosse',
+		      	'number' => 229,
+		      	'description' => '	Dans une meute de Demolosse, le leader est dotÈ de cornes inclinées vers l\'arrière. Ces Pokemon choisissent leur chef en organisant des combats entre eux.',
+		      	'type' => array (
+		      		'Feu',
+                    'TÈnËbres'
+		      	)
+                ), 
+            array(    
+		      	'name' => 'Hyporoi',
+		      	'number' => 230,
+		      	'description' => 'Hyporoi dort au fond de l\'océan, où aucune autre forme de vie ne réside. On raconte que lorsquíune tempÍte survient, cíest que ce Pokemon s\'éveille et erre dans les profondeurs en quête de proies.',
+		      	'type' => array (
+		      		'Dragon',
+                    'Eau'
+		      	) 
+                ), 
+            array(    
+		      	'name' => 'Phanpy',
+		      	'number' => 231,
+		      	'description' =>'Phanpy utilise sa petite trompe pour se doucher. Quand plusieurs d\'entre eux se réunissent, ils s\'arrosent joyeusement. On peut souvent voir ces Pokemon se sÈcher au bord de l\'eau.', 
+		      	'type' => array (
+		      		'Sol'
+                    
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Donphan',
+		      	'number' => 232,
+		      	'description' => 'Si Donphan décidait de charger, il pourrait détruire une maison. Grâce à sa force étonnante, ce Pokemon peut aider à déplacer les rochers et les coulées de boue qui bloquent les chemins de montagne.',
+		      	'type' => array (
+		      		'Sol'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Porygon2',
+		      	'number' => 233,
+		      	'description' => 'Porygon2 fut créé par des humains grâce aux progrés de la science. Ce Pokemon a été doté d\'une intelligence artificielle qui lui permet d\'apprendre de nouveaux mouvements et des émotions par lui-même.',
+		      	'type' => array (
+		      		'Normal'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Cerfrousse',
+		      	'number' => 234,
+		      	'description' => 'Les superbes bois de Cerfrousse étaient vendus très cher comme oeuvres d\'art. Ce PokÈmon fut chassé et l\'espèce proche de l\'extinction à cause des gens qui recherchaient leurs précieux bois.',
+		      	'type' => array (
+		      		'Normal'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Queulorior',
+		      	'number' => 235,
+		      	'description' => 'Queulorior délimite son territoire en libérant un fluide corporel qui sort de sa queue. On a découvert plus de 5000 traces différentes de fluide laissées par ce Pokemon.',
+		      	'type' => array (
+		      		'Normal'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Debugant',
+		      	'number' => 236,
+		      	'description' => 'Debugant devient nerveux s\'il ne s\'entraine pas tous les jours. Lorsqu\'un dresseur élève ce Pokemon, il doit établir et appliquer un programme d\'entrainement très complet.',
+		      	'type' => array (
+		      		'Combat'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Kapoera',
+		      	'number' => 237,
+		      	'description' => 'Kapoera tournoie à toute vitesse sur sa tête, tout en donnant des coups de pied. Cette technique combine des attaques offensives et défensives. Ce Pokemon se déplace plus vite sur la tête qu\'en marchant.',
+		      	'type' => array (
+		      		'Combat'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Lippouti',
+		      	'number' => 238,
+		      	'description' => 'Lippouti court dans tous les sens et tombe assez souvent. Quand il en a l\'occasion, il regarde son reflet dans l\'eau pour vérifier si son visage n\'a pas été sali par ses chutes.',
+		      	'type' => array (
+		      		'Glace',
+                    'Psy'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Elekid',
+		      	'number' => 239,
+		      	'description' => 'Elekid stocke de l\'éléctricité dans son corps. S\'il touche du métal et décharge sans le faire exprês son électricité, ce Pokemon fait des cercles avec ses bras pour se recharger.',
+		      	'type' => array (
+		      		'Electrik'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Magby',
+		      	'number' => 240,
+		      	'description' => 'L\'état de santé de Magby peut être deviné selon le type de flamme qu\'il crache. Si ce Pokemon crache des flammes jaunes, c\'est qu\'il est en bonne santé. Lorsqu\'il est fatigué, de la fumée noire s\'ajoute aux flammes.',
+		      	'type' => array (
+		      		'Feu'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Ecremeuh',
+		      	'number' => 241,
+		      	'description' => 'Ecremeuh produit plus de 20l de lait par jour. Son lait sucré fait le bonheur des petits et des grands. Les gens qui ne boivent pas de lait en font du yaourt.',
+		      	'type' => array (
+		      		'Normal'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Leuphorie',
+		      	'number' => 242,
+		      	'description' => 'Leuphorie ressent la tristesse grâce à son pelage duveteux. Lorsqu\'il la remarque, ce Pokémon se précipite vers la personne triste pour partager avec elle un oeuf Chance, capable de faire naïtre un sourire sur tout visage.',
+		      	'type' => array (
+		      		'Normal'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Raikou',
+		      	'number' => 243,
+		      	'description' => 'Raikou incarne la vitesse de l\'éclair. Les rugissements de ce Pokemon libèrent des ondes de choc provenant du ciel et frappant le sol avec la puissance de la foudre.',
+		      	'type' => array (
+		      		'Electrik'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Entei',
+		      	'number' => 244,
+		      	'description' => 'Entei incarne la colère du magma. On pense que ce Pokemon est né suite à l\'éruption d\'un volcan. Il peut envoyer d\'énormes jets de flammes qui calcinent tout ce qu\'ils touchent.',
+		      	'type' => array (
+		      		'Feu'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Suicune',
+		      	'number' => 245,
+		      	'description' => 'Suicune incarne la tranquillité d\'une source d\'eau pure. Il parcourt les plaines avec grâce. Ce Pokemon a le pouvoir de purifier l\'eau.',
+		      	'type' => array (
+		      		'Eau'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Embrylex',
+		      	'number' => 246,
+		      	'description' => 'Embrylex est né sous terre. Pour remonter à la surface, ce Pokemon doit manger la terre au-dessus de lui. Jusqu'à ce qu\'il y parvienne, Embrylex ne peut pas voir le visage de ses parents.',
+		      	'type' => array (
+		      		'Roche',
+                    'Sol'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Ymphect',
+		      	'number' => 247,
+		      	'description' => 'Ymphect crée un gaz dans son corps qu\'il comprime puissamment pour se propulser, comme un avion à réaction. Son corps est très solide. Il ne l\'endommage pas, même lorsqu\'il frappe de l\'acier trempé.',
+		      	'type' => array (
+		      		'Roche',
+                    'Sol'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Tyranocif',
+		      	'number' => 248,
+		      	'description' => 'Tyranocif est si incroyablement puissant qu\'il peut abattre une montagne pour y faire son nid. Ce Pokemon se promène dans les montagnes pour y trouver de nouveaux adversaires.',
+		      	'type' => array (
+		      		'Roche',
+                    'Ténèbres'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Lugia',
+		      	'number' => 249,
+		      	'description' => 'Les ailes de Lugia renferment une puissance dévastatrice. Un simple battement de ses ailes peut détruire de petites maisons. Du coup, ce Pokemon a choisi de vivre loin de tout, dans les profondeurs océaniques.',
+		      	'type' => array (
+		      		'Psy',
+                    'Vol'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Ho-Oh',
+		      	'number' => 250,
+		      	'description' => 'Les plumes de Ho-Oh brillent de sept couleurs selon l\'orientation de son corps par rapport à la lumière. On raconte que ces plumes portent bonheur. On dit aussi que ce Pokemon vit au pied d\'un arc-en-ciel.',
+		      	'type' => array (
+		      		'Feu',
+                    'Vol'
+		      	)                
+		    ),
+            array(    
+		      	'name' => 'Celebi',
+		      	'number' => 251,
+		      	'description' => 'Ce Pokemon est venu du futur en voyageant dans le temps. On raconte que quand Celebi apparaït, cela signifie que le futur sera bon et agréable.',
+		      	'type' => array (
+		      		'Plante',
+                    'Psy'
+		      	)                
+		    ),
 		);
 
 	    /* Insertion en base */
