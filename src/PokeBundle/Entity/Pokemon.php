@@ -46,7 +46,7 @@ class Pokemon
     private $description;
 
     /**
-    * @Gedmo\Slug(fields={"name", "generation"})
+    * @Gedmo\Slug(fields={"name"})
     * @ORM\Column(length=128, unique=true)
     */
     private $slug;

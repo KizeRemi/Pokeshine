@@ -38,6 +38,17 @@ class Shiny
     private $pokemon;
 
     /**
+    * @ORM\Column(name="description", type="string", nullable=true)
+    */
+    private $description;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="PokeBundle\Entity\HuntingMethod")
+     * @ORM\JoinColumn(name="hunting_method_id", referencedColumnName="id")
+     */
+    private $huntingMethod;
+
+    /**
     * @ORM\Column(name="date_capture", type="datetime", nullable=false)
     */
     private $dateCapture;
@@ -46,6 +57,22 @@ class Shiny
     * @ORM\Column(name="date_creation", type="datetime", nullable=false)
     */
     private $dateCreation;
+
+    /**
+     * @Assert\File(
+     *     maxSize="200k",
+     *     mimeTypes={"image/png", "image/jpeg", "image/jpeg"}
+     * )
+     * @Vich\UploadableField(mapping="shiny_user_image", fileNameProperty="picturePathName")
+     * 
+     * @var File
+     */
+    private $pictureImgFile;
+
+    /**
+    * @ORM\Column(name="secret_path_name", type="string", nullable=true)
+    */
+    private $picturePathName;
 
     /**
      * @ORM\Column(type="datetime")
@@ -189,5 +216,102 @@ class Shiny
     public function getPokemon()
     {
         return $this->pokemon;
+    }
+
+    /**
+     *
+     * @param File|\Symfony\Component\HttpFoundation\File\UploadedFile $image
+     *
+     * @return Shiny
+     */
+    public function setPictureImgFile(File $image = null)
+    {
+        $this->pictureImgFile = $image;
+
+        if ($image) {
+            $this->updatedAt = new \DateTimeImmutable();
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return File|null
+     */
+    public function getPictureImgFile()
+    {
+        return $this->pictureImgFile;
+    }
+
+    /**
+     * Set description
+     *
+     * @param string $description
+     *
+     * @return Shiny
+     */
+    public function setDescription($description)
+    {
+        $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->description;
+    }
+
+    /**
+     * Set picturePathName
+     *
+     * @param string $picturePathName
+     *
+     * @return Shiny
+     */
+    public function setPicturePathName($picturePathName)
+    {
+        $this->picturePathName = $picturePathName;
+
+        return $this;
+    }
+
+    /**
+     * Get picturePathName
+     *
+     * @return string
+     */
+    public function getPicturePathName()
+    {
+        return $this->picturePathName;
+    }
+
+    /**
+     * Set huntingMethod
+     *
+     * @param \PokeBundle\Entity\HuntingMethod $huntingMethod
+     *
+     * @return Shiny
+     */
+    public function setHuntingMethod(\PokeBundle\Entity\HuntingMethod $huntingMethod = null)
+    {
+        $this->huntingMethod = $huntingMethod;
+
+        return $this;
+    }
+
+    /**
+     * Get huntingMethod
+     *
+     * @return \PokeBundle\Entity\HuntingMethod
+     */
+    public function getHuntingMethod()
+    {
+        return $this->huntingMethod;
     }
 }

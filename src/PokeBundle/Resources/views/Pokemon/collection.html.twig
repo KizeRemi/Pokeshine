@@ -1,0 +1,71 @@
+{% extends 'PokeBundle::layout.html.twig' %}
+
+{% block title %}
+Ma collection : Generation 1 !
+{% endblock %}
+
+{% block content %}
+
+	<h1>Collector de shiny !</h1>
+	<ul class="pagination_pokemon">
+		{% set compteur = paginationPokemon[ gen - 1].min - 1  %}
+		{% set min = paginationPokemon[ gen - 1].min %}
+
+		{% for p in range(1, nbPages) %}
+			{% set compteur = compteur + nbPerPage %}
+
+			{% if compteur > paginationPokemon [ gen - 1 ].max %}
+				{% set compteur = paginationPokemon[ gen - 1 ].max %}	
+			{% endif %}
+
+			{% set pagination = min ~ '-' ~ compteur %}
+			<li{% if p == page %} class="active"{% endif %}>
+			  	<a href="{{ path('poke_collector_pokemon', {'gen': gen, 'page': p}) }}">{{ pagination  }}</a>
+			</li>
+			{% set min = min + nbPerPage %}
+		{% endfor %}
+
+	</ul>
+	<div class="container_content">
+		<div class="container_generation">
+			<ul class="bloc_generation">
+			{% for i in 1..7 %}
+				<li>
+					<h3><a href="{{ path('poke_collector_pokemon', {'gen': i, 'page': 1}) }}">Generation {{ i }}</a></h3>
+					{% set img = 'images/menu/gen_'~ i ~'.png'  %}
+					<a href="{{ path('poke_collector_pokemon', {'gen': i, 'page': 1}) }}"><img src="{{ asset(img) }}"/></a>
+				</li>
+			{% endfor %}
+			</ul>
+		</div>
+		
+		<div class="container_pokemon">
+			{% for pokemon in pokemons %}
+				{% set shiny = app.user.hasPokemon(pokemon.id) %}
+				{% if shiny %}
+					<div class="bloc_pokemon shiny">
+						{% if date()  > date(shiny.dateCreation) and date()  <= date(shiny.dateCreation|date_modify("+1 day")) %}
+							<span class="new_shiny">Nouveau !</span>
+						{% endif %}
+						<h2>#{{ pokemon.number|e }}<br>{{ pokemon.name|e }}</h2>
+						<img src="{{ asset('images/pokemon/shiny/shiny_img_47.png') }}" alt="" />
+						<div>
+							<a href="#"><button>Voir</button></a>
+						</div>
+					</div>
+		
+				{% else %}
+					<div class="bloc_pokemon">	
+						<h2>#{{ pokemon.number|e }}<br>{{ pokemon.name|e }}</h2>
+						<img src="{{ asset('images/pokemon/secret/secret_img_47.png') }}" alt="" />
+						<div>
+							<a href="{{ path('poke_add_shiny_pokemon', {'slug': pokemon.slug}) }}"><button>Ajouter</button></a>
+						</div>
+					</div>
+				{% endif %}
+			{% endfor %}
+		</div>
+
+	</div>
+
+{% endblock %}

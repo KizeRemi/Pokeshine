@@ -19,7 +19,7 @@ class PokemonType extends AbstractType
         $builder
             ->add('number',IntegerType::class, array('label' => 'Numero pokedex'))
             ->add('name',TextType::class, array('label' => 'Nom du Pokemon'))
-            ->add('description', null,  array('label' => 'Ajouter la description du Pokemon'))
+            ->add('description', TextAreaType::class,  array('label' => 'Ajouter la description du Pokemon'))
             ->add('generation', ChoiceType::class,  array(
                                     'label' => 'Generation',
                                     'required' => true,

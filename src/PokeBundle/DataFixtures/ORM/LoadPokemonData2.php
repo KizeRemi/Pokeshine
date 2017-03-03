@@ -663,7 +663,7 @@ class LoadPokemonData2 extends AbstractFixture implements OrderedFixtureInterfac
 		      	'description' => 'Les Malosse chassent en meute organisée. Ils communiquent entre eux grâce à une série de petits cris pour encercler leur proie. L\'étonnant travail d\'équipe de ces Pokemon est sans comparaison.',
 		      	'type' => array (
 		      		'Feu',
-                    'Ténèbres '
+                    'Ténèbres'
 		      	)
                 ), 
             array(    
@@ -672,7 +672,7 @@ class LoadPokemonData2 extends AbstractFixture implements OrderedFixtureInterfac
 		      	'description' => '	Dans une meute de Demolosse, le leader est dotÈ de cornes inclinées vers l\'arrière. Ces Pokemon choisissent leur chef en organisant des combats entre eux.',
 		      	'type' => array (
 		      		'Feu',
-                    'TÈnËbres'
+                    'Ténèbres'
 		      	)
                 ), 
             array(    
@@ -809,7 +809,7 @@ class LoadPokemonData2 extends AbstractFixture implements OrderedFixtureInterfac
             array(    
 		      	'name' => 'Embrylex',
 		      	'number' => 246,
-		      	'description' => 'Embrylex est né sous terre. Pour remonter à la surface, ce Pokemon doit manger la terre au-dessus de lui. Jusqu'à ce qu\'il y parvienne, Embrylex ne peut pas voir le visage de ses parents.',
+		      	'description' => 'Embrylex est né sous terre. Pour remonter à la surface, ce Pokemon doit manger la terre au-dessus de lui. Jusqu\'à ce qu\'il y parvienne, Embrylex ne peut pas voir le visage de ses parents.',
 		      	'type' => array (
 		      		'Roche',
                     'Sol'
@@ -864,7 +864,6 @@ class LoadPokemonData2 extends AbstractFixture implements OrderedFixtureInterfac
 
 	    /* Insertion en base */
 	    $i = 2;
-	    $flag = 151;
 	    foreach ($pokemons as $pokemon) {
 			$addPokemon = new Pokemon();
 			$addPokemon->setName($pokemon['name']);
@@ -874,9 +873,6 @@ class LoadPokemonData2 extends AbstractFixture implements OrderedFixtureInterfac
 			/* Nom des images */
 			$secretImagePath = "secret_img_".$pokemon['number'].".png";
 			$shinyImagePath = "shiny_img_".$pokemon['number'].".png";
-			if($flag > 251){
-				$i += 1;
-			}
 			$addPokemon->setSecretPathName($secretImagePath);
 			$addPokemon->setShinyPathName($shinyImagePath);
 			$addPokemon->setGeneration($i);
@@ -887,12 +883,11 @@ class LoadPokemonData2 extends AbstractFixture implements OrderedFixtureInterfac
 			}
 
 			$manager->persist($addPokemon);
-			$flag++;
 	    }
 	    $manager->flush();
     }
     public function getOrder()
     {
-        return 2;
+        return 3;
     }
 }

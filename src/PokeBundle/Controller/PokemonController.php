@@ -19,29 +19,36 @@ class PokemonController extends Controller
 {
 
     /**
-     * @Route("/pokemon/collection/generation_{gen}/page_{page}", name="poke_collector_pokemon")
+     * @Route("/collection/generation_{gen}/page_{page}", name="poke_collector_pokemon")
      */
     public function showAction(Request $request, $gen, $page)
     {
         $session = new Session();
         $user = $this->get('security.token_storage')->getToken()->getUser();
-        $nbTotalPerPokemon = array(151, 100, 135, 107, 156, 72, 81);
+        $myShinies = array();
+        $paginationPokemon = array(
+                              array( 'min' => 1, 'max' => 151),
+                              array( 'min' => 152, 'max' => 251),
+                              array( 'min' => 252, 'max' => 386),
+                              array( 'min' => 387, 'max' => 493),
+                              array( 'min' => 494, 'max' => 649),
+                              array( 'min' => 650,' max' => 721),
+                              array( 'min' => 494, 'max' => 802)
+                            );
+
         if ($page < 1) {
           throw $this->createNotFoundException("La page n'existe pas.");
         }
 
-        $nbPerPage = 20;
+        $nbPerPage = 40;
 
         $em = $this->getDoctrine()->getEntityManager();
         $pokemons = $em->getRepository('PokeBundle:Pokemon')->getPokemonsByGeneration($gen,$page,$nbPerPage);
         $shinies = $user->getShinies();
         $nbPages = ceil(count($pokemons)/$nbPerPage);
         foreach($shinies as $shiny){
-          $myShinies[] = $shiny->getPokemon();
+          $myShinies[] = $shiny->getPokemon()->getId();
         }
-        
-
-        \Doctrine\Common\Util\Debug::dump($myShinies);
         if ($page > $nbPages) {
             throw $this->createNotFoundException("La page n'existe pas.");
         }
@@ -49,47 +56,14 @@ class PokemonController extends Controller
         if(!$pokemons){
             throw new NotFoundHttpException("Page not found");
         }
-        
-        return $this->render('PokeBundle:Pokemon:show_gen.html.twig', array(
+        return $this->render('PokeBundle:Pokemon:collection.html.twig', array(
             'pokemons' => $pokemons,
             'nbPages' => $nbPages,
             'page' => $page,
             'gen' => $gen,
             'nbPerPage' => $nbPerPage,
-            'nbTotalPerPokemon' => $nbTotalPerPokemon,
+            'paginationPokemon' => $paginationPokemon,
             'shinies' => $myShinies
-        ));
-    }
-
-    /**
-     * @Route("/pokemon/shiny/ajouter_{slug}", name="poke_add_shiny_pokemon")
-     */
-    public function addAction(Request $request, $slug)
-    {
-        $session = new Session();
-        $shiny = new Shiny();
-        $user = $this->get('security.token_storage')->getToken()->getUser();
-        $em = $this->getDoctrine()->getEntityManager();
-        $pokemon = $em->getRepository('PokeBundle:Pokemon')->findOneBySlug($slug);
-
-        if(!$pokemon){
-            throw new NotFoundHttpException("Page not found");
-        }
-
-        $form = $this->createForm(ShinyType::class, $shiny);
-        $form->handleRequest($request);
-
-        if ($form->isSubmitted() && $form->isValid()) {
-             $em = $this->getDoctrine()->getManager();
-             $shiny->setPokemon($pokemon);
-             $shiny->setUser($user);
-             $em->persist($shiny);
-             $em->flush();
-             $session->getFlashBag()->add('notice', 'Le shiny a été ajouté. Félicitations !');
-        }
-
-        return $this->render('PokeBundle:Pokemon:add_shiny.html.twig', array(
-            'form' => $form->createView()
         ));
     }
 

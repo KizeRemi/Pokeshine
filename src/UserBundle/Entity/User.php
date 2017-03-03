@@ -5,6 +5,7 @@ namespace UserBundle\Entity;
 use FOS\UserBundle\Model\User as BaseUser;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
+use PokeBundle\Entity\Pokemon;
 
 /**
  * @ORM\Entity
@@ -92,5 +93,16 @@ class User extends BaseUser
     public function getShinies()
     {
         return $this->shinies;
+    }
+
+    public function hasPokemon($id){
+        $shinies = $this->getShinies();
+        foreach($shinies as $shiny){
+            $pokemon = $shiny->getPokemon()->getId();
+            if($id == $pokemon){
+                return $shiny;
+            }
+        }
+        return false;
     }
 }

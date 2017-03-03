@@ -1135,7 +1135,6 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 
 	    /* Insertion en base */
 	    $i = 1;
-	    $flag = 1;
 	    foreach ($pokemons as $pokemon) {
 			$addPokemon = new Pokemon();
 			$addPokemon->setName($pokemon['name']);
@@ -1148,9 +1147,7 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 
 			$addPokemon->setSecretPathName($secretImagePath);
 			$addPokemon->setShinyPathName($shinyImagePath);
-			if($flag == 151 || $flag == 251){
-				$i += 1;
-			}
+
 			$addPokemon->setGeneration($i);
 			if(isset($pokemon['type'])){
 				foreach ($pokemon['type'] as $type){
@@ -1159,7 +1156,6 @@ class LoadPokemonData extends AbstractFixture implements OrderedFixtureInterface
 			}
 
 			$manager->persist($addPokemon);
-			$flag++;
 	    }
 	    $manager->flush();
     }
