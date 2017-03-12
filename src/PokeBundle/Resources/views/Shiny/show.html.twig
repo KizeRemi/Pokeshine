@@ -1,0 +1,26 @@
+{% extends 'PokeBundle::layout.html.twig' %}
+
+{% block title %}
+Voir shiny:
+{% endblock %}
+
+{% block content %}
+	<div class="container_content">
+		<div class="bloc_header">
+			<h2>Shiny</h2>
+			<div>{{ shiny.user.username }}</div>
+			<div>{{ shiny.pokemon.name }}</div>
+		</div>
+		<div class="container_comments">
+			<h2>Commentaire</h2>
+			{{ form_start(form) }}
+				<div class="form_content">
+					{{ form_label(form.message) }}
+					<div class="admin_form_input">{{ form_widget(form.message) }}</div>
+					<div class="form_error">{{ form_errors(form.message)}}</div>
+				</div>
+			{{ form_end(form) }}
+		</div>
+	</div>
+
+{% endblock %}

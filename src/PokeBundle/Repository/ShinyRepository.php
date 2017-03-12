@@ -10,12 +10,24 @@ namespace PokeBundle\Repository;
  */
 class ShinyRepository extends \Doctrine\ORM\EntityRepository
 {
-	public function getShiniesbyUser($user){
 
-		$query =  $this ->createQueryBuilder('s')
-						->select('s.pokemon as pokemon');
+	public function getLastShinies($limit){
+		$query = $this 	->createQueryBuilder('s')
+						->orderBy('s.dateCreation', 'DESC')
+						->setMaxResults($limit);
 
+        return  $query  ->getQuery()
+                        ->getResult();
+	}
+	public function getShinyByPokemonAndHunter($hunter,$pokemon){
+		$query = $this 	->createQueryBuilder('s')
+						->leftJoin('s.pokemon', 'p')
+						->where('p.slug = :pokemon')
+						->andWhere('s.user = :user')
+						->setParameter('pokemon', $pokemon)
+						->setParameter('user', $hunter);
 
-		return $query->getQuery()->getResult();
+        return  $query  ->getQuery()
+                        ->getOneOrNullResult();
 	}
 }

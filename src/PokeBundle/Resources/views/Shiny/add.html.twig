@@ -7,27 +7,37 @@ Ajouter shiny : Test !
 {% block content %}
 	<div class="container_content">
 		<div class="bloc_header">
-			<h1>Formulaire d'ajout de shiny !</h1>
 			<h2>Vous allez ajouter {{ pokemon.name }} à votre collection !</h2>
 			<p>Attention, lors de l'ajout d'un shiny dans votre collection, nous vous demandons de remplir les différents champs le plus précisément possible.<br> Pokeshine est basé sur la confiance des utilisateurs, si vos informations sont incomplètes, le shiny sera moins mis en avant. </p>
+			<p>Nos équipes n'hésitent pas à bannir en cas de fausses informations.</p>
 		</div>
 		<bloc class="bloc_form">
 		{{ form_start(form) }}
-				<div class="admin_form_content input_align">
+				<div class="form_content input_align">
 					{{ form_label(form.dateCapture) }}
 					<div class="admin_form_input">{{ form_widget(form.dateCapture) }}</div>
 					<div class="form_error">{{ form_errors(form.dateCapture)}}</div>
 				</div>
-				<div class="admin_form_content input_align">
+				<div class="form_content">
 					{{ form_label(form.description) }}
 					<div class="admin_form_input">{{ form_widget(form.description) }}</div>
 					<div class="form_error">{{ form_errors(form.description)}}</div>
 				</div>
-				<div class="admin_form_content">
+				<div class="form_content input_align">
+					{{ form_label(form.youtube) }}
+					<div class="admin_form_input">{{ form_widget(form.youtube) }}</div>
+					<div class="form_error">{{ form_errors(form.youtube)}}</div>
+				</div><br>
+				<div class="form_content input_align">
 					{{ form_label(form.pictureImgFile) }}
 					<div class="admin_form_input">{{ form_widget(form.pictureImgFile) }}</div>
 					<div class="form_error">{{ form_errors(form.pictureImgFile)}}</div>
 				</div><br>
+				<div class="form_content input_align">
+					{{ form_label(form.huntingMethod) }}
+					<div class="admin_form_input">{{ form_widget(form.huntingMethod) }}</div>
+					<div class="form_error">{{ form_errors(form.huntingMethod)}}</div>
+				</div>
 			{{ form_widget(form) }}
 		{{ form_end(form) }}
 		</bloc>

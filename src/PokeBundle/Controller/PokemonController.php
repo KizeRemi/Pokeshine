@@ -19,7 +19,7 @@ class PokemonController extends Controller
 {
 
     /**
-     * @Route("/collection/generation_{gen}/page_{page}", name="poke_collector_pokemon")
+     * @Route("/collection/generation-{gen}-page-{page}", name="poke_collector_pokemon")
      */
     public function showAction(Request $request, $gen, $page)
     {

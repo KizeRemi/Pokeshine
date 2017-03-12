@@ -9,7 +9,7 @@ PokeShine - Accueil !
 				POKESHINE
 			</div>
 			<ul class="topnav">
-			  <li><a class="active" href="#home">Home</a></li>
+			  <li><a class="active" href="{{ path('poke_index_home') }}">Home</a></li>
 			  <li><a href="#news">News</a></li>
 			  <li><a href="#contact">Contact</a></li>
 			{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
@@ -38,4 +38,14 @@ PokeShine - Accueil !
 		{% endfor %}
 	{% block content %}
 	{% endblock %}
+		<nav class="circular-menu">
+		  	<div class="circle">
+		    	<a href="" class="fa fa-book fa-2x"></a>
+		    	<a href="" class="fa fa-user-circle fa-2x"></a>
+		    	<a href="" class="fa fa-envelope-o fa-2x"></a>
+		  	</div>
+	  		<a href="" class="test11 menu-button fa fa-star-half-o fa-2x"></a>
+		</nav>
+		<div class="container_menu translate">
+		</div>
 {% endblock %}

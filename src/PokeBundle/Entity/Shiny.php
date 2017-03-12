@@ -43,6 +43,16 @@ class Shiny
     private $description;
 
     /**
+    * @ORM\Column(name="youtube", type="string", nullable=true)
+    * @Assert\Regex(
+    *     pattern="/(http(s)??\:\/\/)?(www\.)?((youtube\.com\/watch\?v=)|(youtu.be\/))([a-zA-Z0-9\-_])+$/",
+    *     match=false,
+    *     message="Your name cannot contain a number"
+    * )
+    */
+    private $youtube;
+    
+    /**
      * @ORM\ManyToOne(targetEntity="PokeBundle\Entity\HuntingMethod")
      * @ORM\JoinColumn(name="hunting_method_id", referencedColumnName="id")
      */
@@ -313,5 +323,29 @@ class Shiny
     public function getHuntingMethod()
     {
         return $this->huntingMethod;
+    }
+
+    /**
+     * Set youtube
+     *
+     * @param string $youtube
+     *
+     * @return Shiny
+     */
+    public function setYoutube($youtube)
+    {
+        $this->youtube = $youtube;
+
+        return $this;
+    }
+
+    /**
+     * Get youtube
+     *
+     * @return string
+     */
+    public function getYoutube()
+    {
+        return $this->youtube;
     }
 }

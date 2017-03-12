@@ -8,11 +8,14 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 class HomeController extends Controller
 {
     /**
-     * @Route("/")
+     * @Route("/", name="poke_index_home")
      */
     public function indexAction()
     {
-    	
-        return $this->render('PokeBundle:Default:home.html.twig');
+    	$em = $this->getDoctrine()->getEntityManager();
+        $lastShinies = $em->getRepository('PokeBundle:Shiny')->getLastShinies(10);
+        return $this->render('PokeBundle:Default:home.html.twig', array(
+			'lastShinies' => $lastShinies
+        ));
     }
 }
