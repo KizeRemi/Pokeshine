@@ -28,7 +28,7 @@ PokeShine - Accueil !
 				</li>
 			{% endif %}
 
-
+			{{ app.user.currentExp }}
 	    	</ul>
 	</header>
 		{% for flashMessage in app.session.flashbag.get('notice') %}

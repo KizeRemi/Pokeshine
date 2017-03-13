@@ -32,7 +32,7 @@ class Shiny
 	private $user;
 
     /**
-     * @ORM\ManyToOne(targetEntity="PokeBundle\Entity\Pokemon", inversedBy="shinies")
+     * @ORM\ManyToOne(targetEntity="PokeBundle\Entity\Pokemon")
      * @ORM\JoinColumn(name="pokemon_id", referencedColumnName="id")
      */
     private $pokemon;
@@ -80,7 +80,7 @@ class Shiny
     private $pictureImgFile;
 
     /**
-    * @ORM\Column(name="secret_path_name", type="string", nullable=true)
+    * @ORM\Column(name="picture_path_name", type="string", nullable=true)
     */
     private $picturePathName;
 

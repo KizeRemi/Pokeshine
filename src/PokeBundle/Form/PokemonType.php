@@ -7,7 +7,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Form\Extension\Core\Type\TextAreaType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Vich\UploaderBundle\Form\Type\VichFileType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
@@ -20,7 +20,7 @@ class PokemonType extends AbstractType
         $builder
             ->add('number',IntegerType::class, array('label' => 'Numero pokedex'))
             ->add('name',TextType::class, array('label' => 'Nom du Pokemon'))
-            ->add('description', TextAreaType::class,  array('label' => 'Ajouter la description du Pokemon'))
+            ->add('description', TextareaType::class,  array('label' => 'Ajouter la description du Pokemon'))
             ->add('generation', ChoiceType::class,  array(
                                     'label' => 'Generation',
                                     'required' => true,

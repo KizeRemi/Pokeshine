@@ -20,16 +20,7 @@ h1,h2,h3{
 a{
     text-decoration: none;
 }
-@font-face {
-    font-family: 'latoregular';
-    src: url('../../../../bundles/Poke/fonts/lato-regular-webfont.eot');
-    src: url('../../../../bundles/Poke/fonts/lato-regular-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../../../bundles/Poke/fonts/lato-regular-webfont.woff2') format('woff2'),
-         url('../../../../bundles/Poke/fonts/lato-regular-webfont.woff') format('woff'),
-         url('../../../../bundles/Poke/fonts/lato-regular-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+
 @font-face {
     font-family: 'robotoregular';
     src: url('../../../../bundles/Poke/fonts/roboto-regular-webfont.eot');
@@ -41,16 +32,7 @@ a{
     font-style: normal;
 
 }
-@font-face {
-    font-family: 'robotoblack';
-    src: url('../../../../bundles/Poke/fonts/roboto-black-webfont.eot');
-    src: url('../../../../bundles/Poke/fonts/roboto-black-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../../../../bundles/Poke/fonts/roboto-black-webfont.woff2') format('woff2'),
-         url('../../../../bundles/Poke/fonts/roboto-black-webfont.woff') format('woff'),
-         url('../../../../bundles/Poke/fonts/roboto-black-webfont.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
+
 /* ANIMATION */
 
 @keyframes pulsecard {

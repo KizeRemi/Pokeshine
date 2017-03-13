@@ -31,9 +31,15 @@ class User extends BaseUser
      */
     private $shinies;
 
+    /**
+     * @ORM\Column(name="current_exp", type="integer", length=25, nullable=false)
+     */
+    protected $currentExp;
+
     public function __construct()
     {
         parent::__construct();
+        $this->currentExp = 0;
         $this->shinies = new ArrayCollection();
     }
 
@@ -104,5 +110,29 @@ class User extends BaseUser
             }
         }
         return false;
+    }
+
+    /**
+     * Set currentExp
+     *
+     * @param integer $currentExp
+     *
+     * @return User
+     */
+    public function setCurrentExp($currentExp)
+    {
+        $this->currentExp = $currentExp;
+
+        return $this;
+    }
+
+    /**
+     * Get currentExp
+     *
+     * @return integer
+     */
+    public function getCurrentExp()
+    {
+        return $this->currentExp;
     }
 }

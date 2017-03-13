@@ -33,6 +33,12 @@ class Comment
     protected $sendBy;
 
     /**
+    * @ORM\ManyToOne(targetEntity="PokeBundle\Entity\Shiny")
+    * @ORM\JoinColumn(name="shiny", referencedColumnName="id")
+    */
+    protected $shiny;
+
+    /**
      * @ORM\Column(name="message",type="text", length=255, nullable=false)
      * @Assert\Length(
      *      max = 255,
@@ -121,5 +127,29 @@ class Comment
     public function getSendBy()
     {
         return $this->sendBy;
+    }
+
+    /**
+     * Set shiny
+     *
+     * @param \PokeBundle\Entity\Shiny $shiny
+     *
+     * @return Comment
+     */
+    public function setShiny(\PokeBundle\Entity\Shiny $shiny = null)
+    {
+        $this->shiny = $shiny;
+
+        return $this;
+    }
+
+    /**
+     * Get shiny
+     *
+     * @return \PokeBundle\Entity\Shiny
+     */
+    public function getShiny()
+    {
+        return $this->shiny;
     }
 }

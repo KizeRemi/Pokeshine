@@ -20,6 +20,12 @@ Voir shiny:
 					<div class="form_error">{{ form_errors(form.message)}}</div>
 				</div>
 			{{ form_end(form) }}
+			{% for comment in comments %}
+				<div>
+					<h3>Posté par {{ comment.sendBy.username }}</h3>
+					{{ comment.message }}
+				</div>
+			{% endfor %}
 		</div>
 	</div>
 

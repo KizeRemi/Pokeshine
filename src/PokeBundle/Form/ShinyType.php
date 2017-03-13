@@ -6,7 +6,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
-use Symfony\Component\Form\Extension\Core\Type\TextAreaType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use Vich\UploaderBundle\Form\Type\VichImageType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
@@ -21,7 +21,7 @@ class ShinyType extends AbstractType
                 'label' => "Date de la capture",
                 'placeholder' => 'Select a value',
             ))
-            ->add('description', TextAreaType::class,  array('label' => 'Ajouter la description du Pokemon (lieux, tentatives, anecdotes)'))
+            ->add('description', TextareaType::class,  array('label' => 'Ajouter la description du Pokemon (lieux, tentatives, anecdotes)'))
             ->add('youtube',TextType::class, array('label' => 'Vidéo Youtube'))
             ->add('pictureImgFile', VichImageType::class, [
 						            'required' => false,
