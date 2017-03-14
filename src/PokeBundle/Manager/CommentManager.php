@@ -14,8 +14,23 @@ class CommentManager extends BaseManager
 		$this->em = $em;
 	}
 
+	public function createComment()
+	{
+		$comment = new Comment();
+
+		return $comment;
+	}
+
 	public function saveComment(Comment $comment){
+
 		$this->persistAndFlush($comment);
+	}
+	
+	public function hydrate($comment, $shiny, $hunter, $user){
+		$comment->setSendBy($user);
+        $comment->setUser($hunter);
+        $comment->setShiny($shiny);
+        return $comment;
 	}
 
 	public function loadComments($user, $shiny, $page){

@@ -60,10 +60,8 @@ class ShinyController extends Controller
     public function showAction(Request $request, $hunter, $pokemon, $page)
     {
         $session = new Session();
-        $comment = new Comment();
         $user = $this->get('security.token_storage')->getToken()->getUser();
         $em = $this->getDoctrine()->getEntityManager();
-        $commentManager = $this->get('poke.comment_manager');
 
         $hunter = $em->getRepository('UserBundle:User')->findOneByUsername($hunter);
         if(!$hunter){
@@ -74,15 +72,17 @@ class ShinyController extends Controller
         if(!$shiny){
             throw new NotFoundHttpException("Ce shiny n'a pas encore été capturé !");
         } 
+        
+        $commentManager = $this->get('poke.comment_manager');
+        $comment = $commentManager->createComment();
         $comments = $commentManager->loadComments($hunter,$shiny, $page);
         $form = $this->createForm(CommentType::class, $comment);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-             $comment->setSendBy($user);
-             $comment->setUser($hunter);
-             $commentManager->saveComment($comment);
-             $session->getFlashBag()->add('notice', 'Le commentaire a été ajouté. Félicitations !');
+            $comment = $commentManager->hydrate($comment, $shiny, $hunter, $user);
+            $commentManager->saveComment($comment);
+            $session->getFlashBag()->add('notice', 'Le commentaire a été ajouté. Félicitations !');
         }
 
         return $this->render('PokeBundle:Shiny:show.html.twig', array(
