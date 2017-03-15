@@ -29,12 +29,14 @@ class ShinyController extends Controller
         $session = new Session();
         $shiny = new Shiny();
         $user = $this->get('security.token_storage')->getToken()->getUser();
+        $xpManager = $this->get('poke.experience_manager');
+        $xpManager->getLevelForUser($user);
+        $xpManager->getExpLeftForUser($user->getCurrentExp());
         $em = $this->getDoctrine()->getEntityManager();
         $pokemon = $em->getRepository('PokeBundle:Pokemon')->findOneBySlug($slug);
         if(!$pokemon){
             throw new NotFoundHttpException("Ce Pokemon n'existe... Peut-être dans la prochaine génération? ;)");
         }
-        \Doctrine\Common\Util\Debug::dump($user);
         if($user->hasPokemon($pokemon->getId())){
             throw new NotFoundHttpException("Vous avez déjà validé ce pokemon.");
         }
@@ -46,6 +48,7 @@ class ShinyController extends Controller
              $shiny->setUser($user);
              $em->persist($shiny);
              $em->flush();
+             $xpManager->setExperienceToUser($user, 100);
              $session->getFlashBag()->add('notice', 'Le shiny a été ajouté. Félicitations !');
         }
 

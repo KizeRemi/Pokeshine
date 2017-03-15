@@ -27,7 +27,7 @@ class CommentManager extends BaseManager
 	}
 	
 	public function hydrate($comment, $shiny, $hunter, $user){
-		$comment->setSendBy($user);
+        $comment->setSendBy($user);
         $comment->setUser($hunter);
         $comment->setShiny($shiny);
         return $comment;

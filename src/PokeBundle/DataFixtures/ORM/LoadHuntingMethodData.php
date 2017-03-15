@@ -13,9 +13,13 @@ class LoadHuntingMethodData extends AbstractFixture implements OrderedFixtureInt
     	/* Tableau de tous les types de pokemon à insérer */
 	    $methods = array(
 		    'Oeuf',
-		    'Rencontre aléatoire',
-		    'Rencontre non aléatoire',
+		    'Nature',
+		    'Horde',
 		    'Pokeradar',
+		    'Navidex',
+		    'Safari',
+		    'Peche',
+		    'Appel à l\'aide',
 		    'Reset',
 		    'Evènement Nintendo'
 		);

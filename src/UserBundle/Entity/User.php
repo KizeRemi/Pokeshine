@@ -39,7 +39,7 @@ class User extends BaseUser
     public function __construct()
     {
         parent::__construct();
-        $this->currentExp = 0;
+        $this->currentExp = 1;
         $this->shinies = new ArrayCollection();
     }
 

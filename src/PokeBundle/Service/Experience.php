@@ -17,17 +17,30 @@ class Experience
 	public function setExperienceToUser(User $user, $experience)
 	{
 		$currentExperience = $user->getCurrentExp();
-		$currentLevel =  $user->getLevel();
 		$experienceTotal = $currentExperience+$experience;
-		/*if($experienceTotal >= $currentLevel->getRequired()){
-       		$level = $this->em->getRepository('CoreBundle:Level')->findOneByLevel($currentLevel->getlevel()+1);
-       		$currentExp = $experienceTotal-$currentLevel->getRequired();
-       		$account->setCurrentExp($currentExp);
-       		$account->setLevel($level);
-		} else {
-			$account->setCurrentExp($currentExperience+$experience);
-		}*/
-        $this->em->persist($account);
+
+		if($experienceTotal < 200000){
+			$user->setCurrentExp($experienceTotal);
+		}
+        $this->em->persist($user);
         $this->em->flush();
+	}
+
+	public function getLevelForUser(User $user)
+	{
+		$currentExperience = $user->getCurrentExp();
+		$level = $this->em->getRepository('PokeBundle:Level')->getLevel($currentExperience);
+		return $level;
+	}
+
+	public function getExpLeftForUser($currentExp)
+	{
+		$expRequired= $this->em->getRepository('PokeBundle:Level')->getExpRequired($currentExp);	
+		if($expRequired != null){
+			$expLeft = $expRequired['required']- $currentExp;
+		} else {
+			$expLeft = "MAX";
+		}
+		return $expLeft;
 	}
 }

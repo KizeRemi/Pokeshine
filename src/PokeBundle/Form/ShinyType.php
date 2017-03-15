@@ -22,7 +22,10 @@ class ShinyType extends AbstractType
                 'placeholder' => 'Select a value',
             ))
             ->add('description', TextareaType::class,  array('label' => 'Ajouter la description du Pokemon (lieux, tentatives, anecdotes)'))
-            ->add('youtube',TextType::class, array('label' => 'Vidéo Youtube'))
+            ->add('youtube',TextType::class, array(
+                                    'label' => 'Vidéo Youtube',
+                                    'required' => false,
+                                    ))
             ->add('pictureImgFile', VichImageType::class, [
 						            'required' => false,
                                     'label' => "Votre photo",
