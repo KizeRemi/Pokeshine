@@ -27,15 +27,15 @@ PokeShine - Accueil !
 					<a href="{{ path('poke_admin_index')}}" >Admin</a>
 				</li>
 			{% endif %}
-
-			
 	    	</ul>
 	</header>
-		{% for flashMessage in app.session.flashbag.get('notice') %}
-
-		    {{ flashMessage }}
-
-		{% endfor %}
+	{% for flashMessage in app.session.flashbag.get('notice') %}
+	    {{ flashMessage }}
+	{% endfor %}
+	<div>
+		Level: {{ experience_manager.getLevelForUser(app.user) }}
+		Experience requis: {{ experience_manager.getExpLeftForUser(app.user.currentExp) }}
+	</div>
 	{% block content %}
 	{% endblock %}
 		<nav class="circular-menu">

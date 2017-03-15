@@ -69,7 +69,9 @@ class Shiny
     private $dateCreation;
 
     /**
-     * @Assert\File(
+     * @Assert\Image(
+     *     minWidth = 200,
+     *     maxWidth = 400,
      *     maxSize="200k",
      *     mimeTypes={"image/png", "image/jpeg", "image/jpeg"}
      * )
