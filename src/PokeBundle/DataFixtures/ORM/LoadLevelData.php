@@ -12,6 +12,7 @@ class LoadLevelData extends AbstractFixture implements OrderedFixtureInterface
     {
     	/* Tableau de tous les types de pokemon à insérer */
 	    $levels = array(
+	      '0',
 	      '100',
 	      '500',
 	      '1000',
@@ -53,7 +54,7 @@ class LoadLevelData extends AbstractFixture implements OrderedFixtureInterface
 	      '190000',
 	      '220000'
 	    );
-	    $i = 2;
+	    $i = 1;
 	    foreach ($levels as $level) {
 	      $addLevel = new Level();
 	      $addLevel->setLevel($i);

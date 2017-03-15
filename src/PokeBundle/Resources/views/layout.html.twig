@@ -32,10 +32,12 @@ PokeShine - Accueil !
 	{% for flashMessage in app.session.flashbag.get('notice') %}
 	    {{ flashMessage }}
 	{% endfor %}
-	<div>
-		Level: {{ experience_manager.getLevelForUser(app.user) }}
-		Experience requis: {{ experience_manager.getExpLeftForUser(app.user.currentExp) }}
-	</div>
+	{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+		<div>
+			Level: {{ experience_manager.getLevelForUser(app.user) }}
+			Experience requis: {{ experience_manager.getExpLeftForUser(app.user.currentExp) }}
+		</div>
+	{% endif %}
 	{% block content %}
 	{% endblock %}
 		<nav class="circular-menu">

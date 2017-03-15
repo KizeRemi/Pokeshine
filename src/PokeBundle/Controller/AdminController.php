@@ -12,6 +12,7 @@ use Symfony\Component\HttpFoundation\File\UploadedFile;
 
 class AdminController extends Controller
 {
+
     /**
      * @Route("/admin", name="poke_admin_index")
      */
@@ -42,13 +43,14 @@ class AdminController extends Controller
              $em->persist($pokemon);
              $em->flush();
              $session->getFlashBag()->add('notice', 'Annonce bien enregistrée.');
-             return $this->redirectToRoute('poke_admin_show_pokemon', array( 'gen' => $form->getData()->getGeneration() ));
+             return $this->redirectToRoute('poke_admin_show_pokemon', array( 'gen' => $form->getData()->getGeneration()));
         }
 
         return $this->render('PokeBundle:Admin:add_poke.html.twig', array(
             'form' => $form->createView(),
-            ));
+        ));
     }
+
     /**
      * @Route("/admin/show/pokemon/{gen}", name="poke_admin_show_pokemon")
      */
