@@ -1,32 +1,50 @@
 {% extends 'PokeBundle::layout.html.twig' %}
 
 {% block title %}
-Voir shiny:
+Voir shiny - {{ shiny.pokemon.name }} - {{ shiny.user.username }}
 {% endblock %}
 
 {% block content %}
 	<div class="container_content">
 		<div class="bloc_header">
-			<h2>Shiny</h2>
-			<div>{{ shiny.user.username }}</div>
-			<div>{{ shiny.pokemon.name }}</div>
+			<h2>{{ shiny.user.username }}
+			{{ shiny.pokemon.name }}</h2>
 		</div>
-		<div class="container_comments">
-			<h2>Commentaire</h2>
-			{{ form_start(form) }}
-				<div class="form_content">
-					{{ form_label(form.message) }}
-					<div class="admin_form_input">{{ form_widget(form.message) }}</div>
-					<div class="form_error">{{ form_errors(form.message)}}</div>
-				</div>
-			{{ form_end(form) }}
-			{% for comment in comments %}
-				<div>
-					<h3>Posté par {{ comment.sendBy.username }}</h3>
-					{{ comment.message }}
-				</div>
-			{% endfor %}
+		<div class="bloc_media">
+			<div class="bloc_youtube">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/80KMzxzccZk" frameborder="0" allowfullscreen></iframe>
+			</div>
+			<div class="bloc_image">
+				{% set imgShiny = 'uploads/shiny/'~ shiny.pokemon.name ~'/'~ shiny.picturePathName %}
+				{% set imgShiny = 'uploads/shiny/Salamèche/58c8e4c80da3a.png' %}
+				<img src="{{ asset(imgShiny) }}" alt="" class="img_shiny" />
+			</div>
 		</div>
+		<div class="container_description">
+			<h3>Description de la capture</h3>
+			<p>{{ shiny.description }}</p>
+		</div>
+		<div class="container_interaction">
+			<div class="bloc_form_comment">
+				<h3>Réagir !</h3>
+				{{ form_start(form) }}
+					<div class="form_content">
+						{{ form_label(form.message) }}
+						<div class="admin_form_input">{{ form_widget(form.message) }}</div>
+						<div class="form_error">{{ form_errors(form.message)}}</div>
+					</div>
+				{{ form_end(form) }}
+			</div>
+			<div class="bloc_share">
+				<h3>Réseaux sociaux</h3>
+			</div>
+		</div>
+		{% for comment in comments %}
+			<div>
+				<h3>Posté par {{ comment.sendBy.username }}</h3>
+				{{ comment.message }}
+			</div>
+		{% endfor %}
 	</div>
 
 {% endblock %}

@@ -20,7 +20,7 @@ class AdminController extends Controller
     {
     	
     	$em = $this->getDoctrine()->getEntityManager();
-        $users = $em->getRepository('UserBundle:User')->getLastUsers(10);
+        $users = $em->getRepository('UserBundle:User')->getLastUsers(12);
 
         return $this->render('PokeBundle:Admin:index.html.twig', array(
         	   'users' => $users

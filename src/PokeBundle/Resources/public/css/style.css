@@ -337,3 +337,38 @@ li > a:visited{
     margin-top: 10px;
     text-align: center;
 }
+.bloc_header{
+    text-align:center;
+    margin: 2rem 0;
+}
+.bloc_media{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.bloc_youtube, .bloc_image{
+    width: 560px;
+    max-height: 350px;
+}
+.bloc_image > img{
+    height: 100%;
+}
+.container_interaction{
+    margin: 2rem;
+    display: flex;
+}
+.bloc_form_comment{
+    width:66%;
+    margin: 1rem;
+    padding: 1rem;
+}
+.bloc_share{
+    width:33%;
+    background-color: grey;
+    margin: 1rem;
+    padding: 1rem;
+}
+.container_description{
+    margin: 2rem;
+    padding: 2rem;
+}
