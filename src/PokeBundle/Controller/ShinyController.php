@@ -7,10 +7,7 @@ use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use PokeBundle\Form\PokemonType;
 use PokeBundle\Form\ShinyType;
 use PokeBundle\Form\CommentType;
-use PokeBundle\Entity\Pokemon;
-use PokeBundle\Entity\Shiny;
 use UserBundle\Entity\User;
-use PokeBundle\Entity\Comment;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Form\Form;
@@ -27,13 +24,17 @@ class ShinyController extends Controller
     {
         // TODO : Validation URL youtube
         $session = new Session();
-        $shiny = new Shiny();
         $user = $this->get('security.token_storage')->getToken()->getUser();
+        $xpManager = $this->get('poke.experience_manager');
+        $shinyManager = $this->get('poke.shiny_manager');
+        $pokemonManager = $this->get('poke.pokemon_manager');
+
         $xpManager = $this->get('poke.experience_manager');
         $xpManager->getLevelForUser($user);
         $xpManager->getExpLeftForUser($user->getCurrentExp());
-        $em = $this->getDoctrine()->getEntityManager();
-        $pokemon = $em->getRepository('PokeBundle:Pokemon')->findOneBySlug($slug);
+       
+        $pokemon = $pokemonManager->findPokemonBySlug($slug);
+
         if(!$pokemon){
             throw new NotFoundHttpException("Ce Pokemon n'existe... Peut-être dans la prochaine génération? ;)");
         }
@@ -41,15 +42,15 @@ class ShinyController extends Controller
             throw new NotFoundHttpException("Vous avez déjà validé ce pokemon.");
         }
 
+        $shiny = $shinyManager->createShiny();
         $form = $this->createForm(ShinyType::class, $shiny);
         $form->handleRequest($request);
+
         if ($form->isSubmitted() && $form->isValid()) {
-             $shiny->setPokemon($pokemon);
-             $shiny->setUser($user);
-             $em->persist($shiny);
-             $em->flush();
-             $xpManager->setExperienceToUser($user, 100);
-             $session->getFlashBag()->add('notice', 'Le shiny a été ajouté. Félicitations !');
+            $shinyManager->hydrate($shiny, $user, $pokemon);
+            $shinyManager->saveShiny($shiny);
+            $xpManager->setExperienceToUser($user, 100);
+            $session->getFlashBag()->add('notice', 'Le shiny a été ajouté. Félicitations !');
         }
 
         return $this->render('PokeBundle:Shiny:add.html.twig', array(
@@ -57,6 +58,7 @@ class ShinyController extends Controller
             'pokemon' => $pokemon
         ));
     }
+    
     /**
      * @Route("/shiny/{hunter}-{pokemon}-p{page}", name="poke_show_shiny_pokemon")
      */
@@ -64,6 +66,8 @@ class ShinyController extends Controller
     {
         $session = new Session();
         $user = $this->get('security.token_storage')->getToken()->getUser();
+        $shinyManager = $this->get('poke.shiny_manager');
+        $commentManager = $this->get('poke.comment_manager');
         $em = $this->getDoctrine()->getEntityManager();
 
         $hunter = $em->getRepository('UserBundle:User')->findOneByUsername($hunter);
@@ -71,12 +75,12 @@ class ShinyController extends Controller
             throw new NotFoundHttpException("Ce chasseur n'existe pas.");
         }  
 
-        $shiny = $em->getRepository('PokeBundle:Shiny')->getShinyByPokemonAndHunter($hunter, $pokemon);
+        $shiny = $shinyManager->findShinyByPokemonAndUser($hunter, $pokemon);
         if(!$shiny){
             throw new NotFoundHttpException("Ce shiny n'a pas encore été capturé !");
         } 
         
-        $commentManager = $this->get('poke.comment_manager');
+
         $comment = $commentManager->createComment();
         $comments = $commentManager->loadComments($hunter,$shiny, $page);
         $form = $this->createForm(CommentType::class, $comment);

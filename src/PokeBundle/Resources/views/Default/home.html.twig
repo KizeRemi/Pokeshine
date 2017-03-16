@@ -1,30 +1,56 @@
 {% extends "PokeBundle::layout.html.twig" %}
 
 {% block content %}
-	Bienvenue sur PokeShine !
-	
 	<div class="container_content">
-		<div bloc_search>
+		<div class="bloc_search">
 			{{ form_start(searchForm) }}
-				<div class="form_content input_align">
-					<div class="admin_form_input">{{ form_widget(searchForm.search) }}</div>
-					<div class="form_error">{{ form_errors(searchForm.search)}}</div>
-					<div class="form_input">{{ form_widget(searchForm.save) }}</div>
-				</div>
+				{{ form_widget(searchForm.search) }}
+				{{ form_errors(searchForm.search)}}
+				{{ form_widget(searchForm.save) }}
 			{{ form_end(searchForm) }}
+			<div class="bloc_social_network">
+			</div>
 		</div>
-		<div class="bloc_last_shinies">
-			<h2>Derniers shinies rencontrés</h2>
-			{% for lastShiny in lastShinies %}
-				<div class="bloc_last_shiny">
-					<h3>{{ lastShiny.pokemon.name }}</h3>
-					<img class="img_last_shiny"/>  
-					<div>Capturé par {{ lastShiny.user.username }}</div>
+		<div id="slider-wrapper">
+			<div class="inner-wrapper">
+				<input checked type="radio" name="slide" class="control" id="Slide1" />
+				<label for="Slide1" id="s1"></label>
+				<input type="radio" name="slide" class="control" id="Slide2" />
+				<label for="Slide2" id="s2"></label>
+				<input type="radio" name="slide" class="control" id="Slide3" />
+				<label for="Slide3" id="s3"></label>
+				<input type="radio" name="slide" class="control" id="Slide4" />
+				<label for="Slide4" id="s4"></label>
+				<div class="overflow-wrapper">
+					{% set compteur = 1 %}
+					{% for lastShiny in lastShinies %}
+						{% if compteur % 3 == 1 %}
+						<a class="slide" href="#">
+							<div class="container_slider">
+						{% endif %}
+								<div class="bloc_last_shiny">
+									<h3>{{ lastShiny.pokemon.name }}</h3>
+									<div>Capturé par {{ lastShiny.user.username }}</div>
+									{% if lastShiny.picturePathName is not null %}
+										{% set imgLastShiny = 'uploads/shiny/'~ lastShiny.pokemon.name ~'/'~ lastShiny.picturePathName %}
+										<img src="{{ asset(imgLastShiny) }}" alt="" class="img_last_shiny" />
+									{% endif %}
+									<div>
+										le {{ lastShiny.dateCapture|date("d/m/Y") }}
+									</div>
+								</div>
+						{% set compteur = compteur + 1 %}
+						{% if compteur % 3 == 1 %}
+							</div>
+						</a>
+						{% endif %}
+					{% endfor %}
+					{% if lastShinies is empty %}
+						<p>Aucun shiny rencontré actuellement.</p>
+					{% endif %}
 				</div>
-			{% endfor %}
-			{% if lastShinies is empty %}
-				<p>Aucun shiny rencontré actuellement.</p>
-			{% endif %}
+			</div>
 		</div>
+		
 	</div>
 {% endblock content %}

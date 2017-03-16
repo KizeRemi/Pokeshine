@@ -14,16 +14,14 @@ class HomeController extends Controller
      */
     public function indexAction(Request $request)
     {
-    	$em = $this->getDoctrine()->getEntityManager();
-        $lastShinies = $em->getRepository('PokeBundle:Shiny')->getLastShinies(10);
+        $shinyManager = $this->get('poke.shiny_manager');
+        $lastShinies = $shinyManager->findLastShinies(10);
 
         $searchForm = $this->createForm(SearchUserType::class, null, array(
-            'action' => $this->generateUrl('poke_index_home'),
+            'action' => $this->generateUrl('user_user_show'),
             'method' => 'POST',
         ));
         $searchForm->handleRequest($request);
-
-        
 
         return $this->render('PokeBundle:Default:home.html.twig', array(
 			'lastShinies' => $lastShinies,

@@ -1,5 +1,5 @@
 .title_admin{
-	width:100;
+	width:100%;
 }
 .container_admin{
 	width:100%;
@@ -141,7 +141,7 @@ th{
 td, tr{
 	border: 1px solid #6E6E6E;
 }
-img {
+.admin_bloc_pokemon > img {
 	max-width: 150px;
 }
 

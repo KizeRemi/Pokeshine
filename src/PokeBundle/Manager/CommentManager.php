@@ -22,7 +22,6 @@ class CommentManager extends BaseManager
 	}
 
 	public function saveComment(Comment $comment){
-
 		$this->persistAndFlush($comment);
 	}
 	

@@ -107,7 +107,7 @@ body {
   transition: all 0.4s ease-out;
 }
 .open_div{
-    display: :block;
+    display: block;
     opacity: 1;
 }
 .open {
@@ -214,11 +214,9 @@ li > a:visited{
     color:#555;
 }
 .container_content{
-    max-width: 85rem;
     background: #F5F5F5;
     border: 1px solid grey;
-    margin: 1.25rem auto;
-    padding: 5% 2%;
+    width: 100%;
 }
 .bloc_generation{
     display: flex;
@@ -294,7 +292,12 @@ li > a:visited{
     justify-content: left; 
 }
 .bloc_last_shiny{
-    width:150px;   
+    width:33%; 
+    margin: 1rem;
+    border: 1px solid blue;  
+}
+.img_last_shiny{
+    max-height: 190px;
 }
 .vich-image > div{
     width: 150px;
@@ -308,6 +311,29 @@ li > a:visited{
     font-size: 18px;
     width: 15%;
 }
-form{
-    padding: 5% 5%;
+
+.bloc_search{
+    width: 100%;
+    height: 300px;  
+}
+.bloc_search > form{
+    margin: auto;
+    width: 800px;
+    padding-top: 120px;
+    text-align: center;
+}
+.bloc_search > form > button {
+    width: 120px;
+    margin-left: 20px;
+    border: none;
+    height: 40px;
+    font-size: 18px;
+}
+.bloc_search > form > input {
+    width: 400px;
+}
+.bloc_social_network{
+    margin: auto;
+    margin-top: 10px;
+    text-align: center;
 }

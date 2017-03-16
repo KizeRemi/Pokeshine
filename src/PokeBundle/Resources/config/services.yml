@@ -12,6 +12,12 @@ services:
     poke.comment_manager:
         class: PokeBundle\Manager\CommentManager
         arguments: ["@doctrine.orm.entity_manager"]
+    poke.shiny_manager:
+        class: PokeBundle\Manager\ShinyManager
+        arguments: ["@doctrine.orm.entity_manager"]
+    poke.pokemon_manager:
+        class: PokeBundle\Manager\PokemonManager
+        arguments: ["@doctrine.orm.entity_manager"]
     poke.experience_manager:
         class: PokeBundle\Service\Experience
         arguments: ['@doctrine.orm.entity_manager']

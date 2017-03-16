@@ -25,7 +25,7 @@ class PokemonController extends Controller
     {
         $session = new Session();
         $user = $this->get('security.token_storage')->getToken()->getUser();
-        $myShinies = array();
+        $pokemonManager = $this->get('poke.pokemon_manager');
         $paginationPokemon = array(
                               array( 'min' => 1, 'max' => 151),
                               array( 'min' => 152, 'max' => 251),
@@ -41,21 +41,23 @@ class PokemonController extends Controller
         }
 
         $nbPerPage = 40;
-
-        $em = $this->getDoctrine()->getEntityManager();
-        $pokemons = $em->getRepository('PokeBundle:Pokemon')->getPokemonsByGeneration($gen,$page,$nbPerPage);
-        $shinies = $user->getShinies();
+        $pokemons = $pokemonManager->findPokemonsByGeneration($gen,$page,$nbPerPage);
         $nbPages = ceil(count($pokemons)/$nbPerPage);
-        foreach($shinies as $shiny){
-          $myShinies[] = $shiny->getPokemon()->getId();
-        }
+
         if ($page > $nbPages) {
             throw $this->createNotFoundException("La page n'existe pas.");
         }
 
         if(!$pokemons){
-            throw new NotFoundHttpException("Page not found");
+            throw $this->createNotFoundException("La page n'existe pas.");
         }
+
+        $myShinies = array();
+        $shinies = $user->getShinies();
+        foreach($shinies as $shiny){
+          $myShinies[] = $shiny->getPokemon()->getId();
+        }
+
         return $this->render('PokeBundle:Pokemon:collection.html.twig', array(
             'pokemons' => $pokemons,
             'nbPages' => $nbPages,
@@ -73,8 +75,8 @@ class PokemonController extends Controller
     public function editAction(Request $request, $slug)
     {
     	$session = new Session();
-    	$em = $this->getDoctrine()->getEntityManager();
-      $pokemon = $em->getRepository('PokeBundle:Pokemon')->findOneBySlug($slug);
+      $pokemonManager = $this->get('poke.pokemon_manager');
+      $pokemon = $pokemonManager->findPokemonBySlug($slug);
       if(!$pokemon){
           throw new NotFoundHttpException("Page not found");
       }
@@ -82,9 +84,7 @@ class PokemonController extends Controller
       $form->handleRequest($request);
 
       if ($form->isSubmitted() && $form->isValid()) {
-           $em = $this->getDoctrine()->getManager();
-           $em->persist($pokemon);
-           $em->flush();
+           $pokemonManager->savePokemon($pokemon);
            $session->getFlashBag()->add('notice', 'Le pokemon a bien été modifié.');
       }
 
