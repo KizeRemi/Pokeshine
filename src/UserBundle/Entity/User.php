@@ -44,6 +44,17 @@ class User extends BaseUser
     }
 
     /**
+     * {@inheritdoc}
+     */
+    public function setUsername($username)
+    {
+        $username = ucfirst(strtolower($username));
+        $this->username = $username;
+
+        return $this;
+    }
+
+    /**
      * Set friendCode
      *
      * @param string $friendCode

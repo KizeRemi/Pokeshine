@@ -253,15 +253,15 @@ li > a:visited{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 100px;
-    padding: 0 50px;   
+    margin-top: 60px;
+    padding: 0 8rem;   
 }
 .bloc_pokemon{
 
     padding: 1.5rem 2rem;
     border-radius: 15px;
     border: 1px solid blue;
-    margin: 15px 0px;
+    margin: 1.5rem 1rem;
     background-color: lightskyblue;
     text-align: center
 }
@@ -340,6 +340,15 @@ li > a:visited{
 .bloc_header{
     text-align:center;
     margin: 2rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+.bloc_header > div{
+    width: 33%;
+}
+.bloc_favorites{
+    display: flex;
+    justify-content: space-around;
 }
 .bloc_media{
     display: flex;

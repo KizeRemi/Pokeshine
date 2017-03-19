@@ -21,3 +21,9 @@ services:
     poke.experience_manager:
         class: PokeBundle\Service\Experience
         arguments: ['@doctrine.orm.entity_manager']
+    poke.follower_manager:
+        class: PokeBundle\Service\Follower
+        arguments: ['@doctrine.orm.entity_manager']
+    poke.reporter_manager:
+        class: PokeBundle\Service\Reporter
+        arguments: ['@doctrine.orm.entity_manager']

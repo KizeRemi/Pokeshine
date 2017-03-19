@@ -7,8 +7,24 @@ Voir shiny - {{ shiny.pokemon.name }} - {{ shiny.user.username }}
 {% block content %}
 	<div class="container_content">
 		<div class="bloc_header">
-			<h2>{{ shiny.user.username }}
-			{{ shiny.pokemon.name }}</h2>
+			<div class="bloc_hunter">
+				Shasseur: {{ shiny.user.username }}
+				Niveau: {{ experience_manager.getLevelForUser(shiny.user) }}<br>
+				Dernière activité: {{ shiny.user.lastLogin|date("d/m/Y") }}
+			</div>
+			<div>
+				<h2>#{{ "%03d"|format(shiny.pokemon.number) }}{{ shiny.pokemon.name }}</h2>
+			</div>
+			<div class="bloc_favorites">
+				<div class="">
+					<h3>Favoris</h3>
+					<a href="{{ path('poke_add_follow', {'username': shiny.user.username }) }}" class="fa fa-star fa-2x"></a>
+				</div>
+				<div class="">
+					<h3>Reporter</h3>
+					<a href="{{ path('poke_add_report', {'username': shiny.user.username }) }}" class="fa fa-bolt fa-2x"></a>
+				</div>
+			</div>
 		</div>
 		<div class="bloc_media">
 			<div class="bloc_youtube">
@@ -39,12 +55,16 @@ Voir shiny - {{ shiny.pokemon.name }} - {{ shiny.user.username }}
 				<h3>Réseaux sociaux</h3>
 			</div>
 		</div>
-		{% for comment in comments %}
-			<div>
-				<h3>Posté par {{ comment.sendBy.username }}</h3>
-				{{ comment.message }}
-			</div>
-		{% endfor %}
+		<div class="container_comments">
+			{% for comment in comments %}
+				<div class="bloc_comment">
+					<h3>Posté par {{ comment.sendBy.username }}</h3>
+					<div class="comment_message">
+						{{ comment.message }}
+					</div>
+				</div>
+			{% endfor %}
+		</div>
 	</div>
 
 {% endblock %}
